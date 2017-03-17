@@ -1,6 +1,6 @@
 package com.restaurant.rakshith;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Rakshith on 3/17/2017.
@@ -17,7 +17,7 @@ public class Party implements Cloneable {
     }
 
 
-    public boolean checkRepeatedNames(ArrayList<Table> tablesServed, ArrayList<Party> waitList, String nameToCheck) {
+    public boolean checkRepeatedNames(List<Table> tablesServed, List<Party> waitList, String nameToCheck) {
         for (Table tableItem : tablesServed) {
             if (tableItem.getOccupiedStatus() && tableItem.getParty().getName().compareTo(nameToCheck) == 0) {
                 return true;
