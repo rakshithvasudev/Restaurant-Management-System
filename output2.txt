@@ -1,0 +1,235 @@
+Restaurant Simulator
+File name for restaurant data [tables.txt]? 
+
+Main System Menu
+----------------
+S)ervers on duty
+A)dd server
+D)ismiss server
+R)egister
+P)arty has arrived
+T)ables status
+C)heck, please
+W)aiting list
+?) display this menu of choices again
+Q)uit
+
+Main menu, enter your choice: a
+Adding a new server to our workforce:
+Current server count: 1
+
+Main menu, enter your choice: a
+Adding a new server to our workforce:
+Current server count: 2
+
+Main menu, enter your choice: p
+Party's name? Nguyen
+How many people in the party? 8
+
+Main menu, enter your choice: p
+Party's name? Johnson
+How many people in the party? 7
+Sorry, there is no open table that can seat this party now.
+Place this party onto the waiting list? (y/n) y
+
+Main menu, enter your choice: w
+Waiting list:
+Johnson party of 7
+
+Main menu, enter your choice: p
+Party's name? Stepp
+How many people in the party? 5
+
+Main menu, enter your choice: p
+Party's name? Reges
+How many people in the party? 4
+
+Main menu, enter your choice: p
+Party's name? Erickson
+How many people in the party? 5
+Sorry, there is no open table that can seat this party now.
+Place this party onto the waiting list? (y/n) y
+
+Main menu, enter your choice: p
+Party's name? Menz
+How many people in the party? 4
+
+Main menu, enter your choice: p
+Party's name? Obourn
+How many people in the party? 6
+Sorry, there is no open table that can seat this party now.
+Place this party onto the waiting list? (y/n) y
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Menz party of 4 - Server #2
+Table 3 (8-top): Nguyen party of 8 - Server #1
+Table 4 (2-top): empty
+Table 5 (2-top): empty
+Table 6 (6-top): Stepp party of 5 - Server #2
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: w
+Waiting list:
+Johnson party of 7
+Erickson party of 5
+Obourn party of 6
+
+Main menu, enter your choice: p
+Party's name? Limketkai
+How many people in the party? 2
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Stepp
+Bill subtotal? 38.00
+Tip? 9.00
+Gave tip of $9.00 to Server #2.
+Gave total of $41.80 to cash register.
+Seating from waiting list:
+Table 6 (6-top): Erickson party of 5 - Server #2
+
+Main menu, enter your choice: w
+Waiting list:
+Johnson party of 7
+Obourn party of 6
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Menz party of 4 - Server #2
+Table 3 (8-top): Nguyen party of 8 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): empty
+Table 6 (6-top): Erickson party of 5 - Server #2
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: p
+Party's name? Kirst
+How many people in the party? 4
+
+Main menu, enter your choice: p
+Party's name? Miller
+How many people in the party? 3
+Sorry, there is no open table that can seat this party now.
+Place this party onto the waiting list? (y/n) y
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Menz party of 4 - Server #2
+Table 3 (8-top): Nguyen party of 8 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): empty
+Table 6 (6-top): Erickson party of 5 - Server #2
+Table 7 (4-top): Kirst party of 4 - Server #1
+Table 8 (2-top): empty
+
+Main menu, enter your choice: w
+Waiting list:
+Johnson party of 7
+Obourn party of 6
+Miller party of 3
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Menz
+Bill subtotal? 100.00
+Tip? 25.00
+Gave tip of $25.00 to Server #2.
+Gave total of $110.00 to cash register.
+Seating from waiting list:
+Table 2 (4-top): Miller party of 3 - Server #2
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Miller party of 3 - Server #2
+Table 3 (8-top): Nguyen party of 8 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): empty
+Table 6 (6-top): Erickson party of 5 - Server #2
+Table 7 (4-top): Kirst party of 4 - Server #1
+Table 8 (2-top): empty
+
+Main menu, enter your choice: w
+Waiting list:
+Johnson party of 7
+Obourn party of 6
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Nguyen
+Bill subtotal? 320.00
+Tip? 0.00
+Gave tip of $0.00 to Server #1.
+Gave total of $352.00 to cash register.
+Seating from waiting list:
+Table 3 (8-top): Johnson party of 7 - Server #1
+
+Main menu, enter your choice: p
+Party's name? Dean
+How many people in the party? 1
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Miller party of 3 - Server #2
+Table 3 (8-top): Johnson party of 7 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): Dean party of 1 - Server #2
+Table 6 (6-top): Erickson party of 5 - Server #2
+Table 7 (4-top): Kirst party of 4 - Server #1
+Table 8 (2-top): empty
+
+Main menu, enter your choice: w
+Waiting list:
+Obourn party of 6
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Erickson
+Bill subtotal? 5000.99
+Tip? 1.00
+Gave tip of $1.00 to Server #2.
+Gave total of $5501.09 to cash register.
+Seating from waiting list:
+Table 6 (6-top): Obourn party of 6 - Server #1
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Miller party of 3 - Server #2
+Table 3 (8-top): Johnson party of 7 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): Dean party of 1 - Server #2
+Table 6 (6-top): Obourn party of 6 - Server #1
+Table 7 (4-top): Kirst party of 4 - Server #1
+Table 8 (2-top): empty
+
+Main menu, enter your choice: w
+Waiting list:
+empty
+
+Main menu, enter your choice: d
+Dismissing a server:
+Server #2 cashes out with $35.00 in total tips.
+Servers now available: 1
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Reges party of 4 - Server #1
+Table 2 (4-top): Miller party of 3 - Server #1
+Table 3 (8-top): Johnson party of 7 - Server #1
+Table 4 (2-top): Limketkai party of 2 - Server #1
+Table 5 (2-top): Dean party of 1 - Server #1
+Table 6 (6-top): Obourn party of 6 - Server #1
+Table 7 (4-top): Kirst party of 4 - Server #1
+Table 8 (2-top): empty
+
+Main menu, enter your choice: q
+
+Goodbye!

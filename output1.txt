@@ -1,0 +1,311 @@
+Restaurant Simulator
+File name for restaurant data [tables.txt]? 
+
+Main System Menu
+----------------
+S)ervers on duty
+A)dd server
+D)ismiss server
+R)egister
+P)arty has arrived
+T)ables status
+C)heck, please
+W)aiting list
+?) display this menu of choices again
+Q)uit
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): empty
+Table 2 (4-top): empty
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): empty
+Table 6 (6-top): empty
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: r
+Cash register:
+Total money earned = $0.00
+
+Main menu, enter your choice: p
+Sorry, there are no servers here yet to seat this party
+and take their orders.  Add servers and try again.
+
+Main menu, enter your choice: a
+Adding a new server to our workforce:
+Current server count: 1
+
+Main menu, enter your choice: a
+Adding a new server to our workforce:
+Current server count: 2
+
+Main menu, enter your choice: a
+Adding a new server to our workforce:
+Current server count: 3
+
+Main menu, enter your choice: s
+Servers currently on duty:
+Server #1 ($0.00 in total tips)
+Server #2 ($0.00 in total tips)
+Server #3 ($0.00 in total tips)
+Current server count: 3
+
+
+Main menu, enter your choice: p
+Party's name? Smith
+How many people in the party? 5
+
+Main menu, enter your choice: p
+Party's name? Jones
+How many people in the party? 2
+
+Main menu, enter your choice: p
+Party's name? Obourn
+How many people in the party? 4
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Obourn party of 4 - Server #3
+Table 2 (4-top): empty
+Table 3 (8-top): empty
+Table 4 (2-top): Jones party of 2 - Server #2
+Table 5 (2-top): empty
+Table 6 (6-top): Smith party of 5 - Server #1
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: p
+Party's name? Erickson
+How many people in the party? 1
+
+Main menu, enter your choice: p
+Party's name? UW Men's Basketball Team
+How many people in the party? 12
+Sorry, the restaurant is unable to seat a party of this size.
+
+Main menu, enter your choice: p
+Party's name? Menz
+How many people in the party? 7
+
+Main menu, enter your choice: p
+Party's name? Stepp
+How many people in the party? 2
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Obourn party of 4 - Server #3
+Table 2 (4-top): empty
+Table 3 (8-top): Menz party of 7 - Server #2
+Table 4 (2-top): Jones party of 2 - Server #2
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): Smith party of 5 - Server #1
+Table 7 (4-top): empty
+Table 8 (2-top): Stepp party of 2 - Server #3
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Jones
+Bill subtotal? 40.00
+Tip? 5.00
+Gave tip of $5.00 to Server #2.
+Gave total of $44.00 to cash register.
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Obourn party of 4 - Server #3
+Table 2 (4-top): empty
+Table 3 (8-top): Menz party of 7 - Server #2
+Table 4 (2-top): empty
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): Smith party of 5 - Server #1
+Table 7 (4-top): empty
+Table 8 (2-top): Stepp party of 2 - Server #3
+
+Main menu, enter your choice: s
+Servers currently on duty:
+Server #1 ($0.00 in total tips)
+Server #2 ($5.00 in total tips)
+Server #3 ($0.00 in total tips)
+Current server count: 3
+
+
+Main menu, enter your choice: p
+Party's name? Reges
+How many people in the party? 4
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Menz
+Bill subtotal? 350.48
+Tip? 12.45
+Gave tip of $12.45 to Server #2.
+Gave total of $385.53 to cash register.
+
+Main menu, enter your choice: d
+Dismissing a server:
+Server #2 cashes out with $17.45 in total tips.
+Servers now available: 2
+
+Main menu, enter your choice: s
+Servers currently on duty:
+Server #3 ($0.00 in total tips)
+Server #1 ($0.00 in total tips)
+Current server count: 2
+
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Obourn party of 4 - Server #3
+Table 2 (4-top): Reges party of 4 - Server #1
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): Smith party of 5 - Server #1
+Table 7 (4-top): empty
+Table 8 (2-top): Stepp party of 2 - Server #3
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Jones
+There is no party by that name.
+
+Main menu, enter your choice: 55.40
+Invalid input.  Please try again.
+Main menu, enter your choice: 13.55
+Invalid input.  Please try again.
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Smith
+Bill subtotal? 147.58
+Tip? 30.57
+Gave tip of $30.57 to Server #1.
+Gave total of $162.34 to cash register.
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): Obourn party of 4 - Server #3
+Table 2 (4-top): Reges party of 4 - Server #1
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): empty
+Table 7 (4-top): empty
+Table 8 (2-top): Stepp party of 2 - Server #3
+
+Main menu, enter your choice: s
+Servers currently on duty:
+Server #3 ($0.00 in total tips)
+Server #1 ($30.57 in total tips)
+Current server count: 2
+
+
+Main menu, enter your choice: r
+Cash register:
+Total money earned = $591.87
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Illegal Party Name
+There is no party by that name.
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Obourn
+Bill subtotal? 120.47
+Tip? 35.79
+Gave tip of $35.79 to Server #3.
+Gave total of $132.52 to cash register.
+
+Main menu, enter your choice: d
+Dismissing a server:
+Server #3 cashes out with $35.79 in total tips.
+Servers now available: 1
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): empty
+Table 2 (4-top): Reges party of 4 - Server #1
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): empty
+Table 7 (4-top): empty
+Table 8 (2-top): Stepp party of 2 - Server #1
+
+Main menu, enter your choice: d
+Sorry, the server cannot cash out now;
+there are still tables remaining and this is the only server left.
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Reges
+Bill subtotal? 65.73
+Tip? 15.00
+Gave tip of $15.00 to Server #1.
+Gave total of $72.30 to cash register.
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Stepp
+Bill subtotal? 35.71
+Tip? 8.66
+Gave tip of $8.66 to Server #1.
+Gave total of $39.28 to cash register.
+
+Main menu, enter your choice: d
+Sorry, the server cannot cash out now;
+there are still tables remaining and this is the only server left.
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): empty
+Table 2 (4-top): empty
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): Erickson party of 1 - Server #1
+Table 6 (6-top): empty
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: c
+Send the check to a party that has finished eating:
+Party's name? Erickson
+Bill subtotal? 8.00
+Tip? 2.50
+Gave tip of $2.50 to Server #1.
+Gave total of $8.80 to cash register.
+
+Main menu, enter your choice: t
+Tables status:
+Table 1 (4-top): empty
+Table 2 (4-top): empty
+Table 3 (8-top): empty
+Table 4 (2-top): empty
+Table 5 (2-top): empty
+Table 6 (6-top): empty
+Table 7 (4-top): empty
+Table 8 (2-top): empty
+
+Main menu, enter your choice: d
+Dismissing a server:
+Server #1 cashes out with $56.73 in total tips.
+Servers now available: 0
+
+Main menu, enter your choice: s
+Servers currently on duty:
+Current server count: 0
+
+
+Main menu, enter your choice: r
+Cash register:
+Total money earned = $844.77
+
+Main menu, enter your choice: p
+Sorry, there are no servers here yet to seat this party
+and take their orders.  Add servers and try again.
+
+Main menu, enter your choice: q
+
+Goodbye!
