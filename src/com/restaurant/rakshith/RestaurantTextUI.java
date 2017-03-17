@@ -107,7 +107,7 @@ public class RestaurantTextUI {
 		System.out.println("Servers currently on duty:");
 		
 		// TODO: display current servers, e.g.:
-		// Server #1 ($49.76 in total tips)
+		// Servers #1 ($49.76 in total tips)
 		crash("display current servers");
 	}
 	
@@ -135,7 +135,7 @@ public class RestaurantTextUI {
 		System.out.println("Dismissing a server:");
 		
 		// TODO: cash out server and display current count of servers
-		// Server #2 cashes out with $47.95 in total tips.
+		// Servers #2 cashes out with $47.95 in total tips.
 		// Servers now available: 3
 		
 		crash("dismiss a server");
@@ -157,7 +157,7 @@ public class RestaurantTextUI {
 		System.out.println("Tables status:");
 
 		// TODO: show restaurant's table statuses, e.g.:
-		// Table 5 (2-top): Jones party of 2 - Server #2
+		// Table 5 (2-top): Jones party of 2 - Servers #2
 		// Table 6 (4-top): empty
 		crash("display tables status");
 	}
@@ -173,14 +173,14 @@ public class RestaurantTextUI {
 		double tip = ValidInputReader.getValidDouble("Tip?", 0.0, 9999.99);
 		
 		// TODO: give tip to server, e.g.:
-		// Gave tip of $9.50 to Server #2.
+		// Gave tip of $9.50 to Servers #2.
 			
 		// update restaurant's cash register, e.g.
 		// Gave total of $39.75 to cash register.
 		
 		System.out.println("Seating from waiting list:");
 		// when a party on the waiting list can now be seated, e.g.:
-		// Table 6 (6-top): Erickson party of 5 - Server #2
+		// Table 6 (6-top): Erickson party of 5 - Servers #2
 		
 		// when such a party is NOT sitting at a table in the restaurant,
 		System.out.println("There is no party by that name.");
