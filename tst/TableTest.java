@@ -9,6 +9,6 @@ public class TableTest {
 
     @Test
     public void constructorTest(){
-        
+
     }
 }
