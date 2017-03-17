@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant.iml" afterPath="$PROJECT_DIR$/Restaurant.iml" />
-    </list>
+    <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +29,7 @@
       <file leaf-file-name="RestaurantTextUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13056">
+            <state relative-caret-position="13992">
               <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
               <folding />
             </state>
@@ -607,12 +604,12 @@
       <workItem from="1489423659511" duration="1207000" />
       <workItem from="1489698907361" duration="1623000" />
       <workItem from="1489718984239" duration="3672000" />
-      <workItem from="1489740583524" duration="88000" />
+      <workItem from="1489740583524" duration="182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17788000" />
+    <option name="totallyTimeSpent" value="17882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3854" height="2098" extended-state="0" />
@@ -946,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13056">
+        <state relative-caret-position="13992">
           <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
           <folding />
         </state>
