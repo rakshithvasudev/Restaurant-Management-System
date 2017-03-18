@@ -68,9 +68,9 @@ public class Party implements Cloneable, Comparable<Party>{
         if (obj != null && getClass() == obj.getClass()) {
             Party equalsParty = (Party) obj;
 
-            return this.beingServed == equalsParty.beingServed &&
-                    this.size == equalsParty.size &&
-                    this.name.compareTo(equalsParty.name) == 0;
+            return beingServed == equalsParty.beingServed &&
+                    size == equalsParty.size &&
+                    name.compareTo(equalsParty.name) == 0;
         }
         return false;
     }
@@ -87,11 +87,13 @@ public class Party implements Cloneable, Comparable<Party>{
 
     @Override
     public String toString() {
-        return super.toString();
+
+        return "Party Name: "+name + " whose size is: "+ size +
+                (isBeingServed()? " who is being served.":" who is not served.");
     }
 
     @Override
     public int compareTo(Party o) {
-        return  this.size-o.size;
+        return  size-o.size;
     }
 }

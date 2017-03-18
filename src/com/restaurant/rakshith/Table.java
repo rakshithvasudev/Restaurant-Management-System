@@ -90,9 +90,9 @@ public class Table implements Cloneable, Comparable<Table> {
     public boolean equals(Object obj) {
         if(obj!=null && getClass()==obj.getClass()){
             Table objTable = (Table)obj;
-            return this.capacity==objTable.capacity &&
-                    this.occupiedStatus==objTable.occupiedStatus &&
-                    this.server.equals(objTable.server);
+            return capacity==objTable.capacity &&
+                    occupiedStatus==objTable.occupiedStatus &&
+                    server.equals(objTable.server);
         }
         return false;
     }
@@ -111,11 +111,13 @@ public class Table implements Cloneable, Comparable<Table> {
 
     @Override
     public String toString() {
-        return super.toString();
-    }
+        return "Table id: "+ id+ "occupied status: " +
+                (occupiedStatus?" occupied by("+ party.getName()+" , "+
+                        party.getSize()+")":"Not Occupied");
+}
 
     @Override
     public int compareTo(Table o) {
-        return 0;
+        return capacity-o.capacity;
     }
 }
