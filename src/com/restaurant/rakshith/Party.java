@@ -5,32 +5,17 @@ import java.util.List;
 /**
  * Created by Rakshith on 3/17/2017.
  */
-public class Party implements Cloneable {
+public class Party implements Cloneable, Comparable<Party>{
 
     private String name;
     private int size;
     private boolean beingServed;
 
     public Party(String name, int size) {
-        this.name = name;
-        this.size = size;
-    }
-
-
-    public boolean checkRepeatedNames(List<Table> tablesServed, List<Party> waitList, String nameToCheck) {
-        for (Table tableItem : tablesServed) {
-            if (tableItem.getOccupiedStatus() && tableItem.getParty().getName().compareTo(nameToCheck) == 0) {
-                return true;
-            }
-        }
-
-        for (Party partyItem : waitList) {
-            if (partyItem.getName().compareTo(nameToCheck) == 0) {
-                return true;
-            }
-        }
-
-        return false;
+        if(name!=null && !name.isEmpty() ||size>0) {
+            this.name = name;
+            this.size = size;
+        }else throw new IllegalArgumentException("Enter Correct name & Size");
     }
 
 
@@ -48,6 +33,22 @@ public class Party implements Cloneable {
 
     public void setBeingServed(boolean beingServed) {
         this.beingServed = beingServed;
+    }
+
+    public boolean checkRepeatedNames(List<Table> tablesServed, List<Party> waitList, String nameToCheck) {
+        for (Table tableItem : tablesServed) {
+            if (tableItem.getOccupiedStatus() && tableItem.getParty().getName().compareTo(nameToCheck) == 0) {
+                return true;
+            }
+        }
+
+        for (Party partyItem : waitList) {
+            if (partyItem.getName().compareTo(nameToCheck) == 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public String getName() {
@@ -70,16 +71,14 @@ public class Party implements Cloneable {
             return this.beingServed == equalsParty.beingServed &&
                     this.size == equalsParty.size &&
                     this.name.compareTo(equalsParty.name) == 0;
-
         }
         return false;
     }
 
     @Override
-    public Party clone() {
+    public Party clone(){
         try {
-            Party copy = (Party) super.clone();
-            return copy;
+            return (Party)super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -89,5 +88,10 @@ public class Party implements Cloneable {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public int compareTo(Party o) {
+        return  this.size-o.size;
     }
 }
