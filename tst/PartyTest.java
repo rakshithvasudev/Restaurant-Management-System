@@ -49,8 +49,54 @@ public class PartyTest {
     }
 
 
+    @Test(expected = IllegalArgumentException.class)
+    public void IllegalSizeTest(){
+        //Given
+        Party aParty = new Party("aParty",0);
 
+        //When (Action)
+        aParty.setBeingServed(true);
 
+        //Assert
+        Assert.fail();
+    }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void IllegalNameTest(){
+        //Given
+        Party aParty = new Party(null,0);
 
+        //When (Action)
+        aParty.setBeingServed(true);
+
+        //Assert
+        Assert.fail();
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void IllegalNameTest2(){
+        //Given
+        Party aParty = new Party("",0);
+
+        //When (Action)
+        aParty.setBeingServed(true);
+
+        //Assert
+        Assert.fail();
+    }
+
+    @Test
+    public void beingServedTest(){
+        //Given (Arrange)
+        Party aParty = new Party("aParty",4);
+        Party bParty = new Party("bParty",3);
+
+        //When(Action)
+        bParty.setBeingServed(true);
+        aParty.setBeingServed(false);
+
+        //Assert
+        Assert.assertEquals("Sorry, Being served test failed",aParty.getBeingServed(),false);
+        Assert.assertEquals("Sorry, Being served test failed",bParty.getBeingServed(),true);
+    }
 }

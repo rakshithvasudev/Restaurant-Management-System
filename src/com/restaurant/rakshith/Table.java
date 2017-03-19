@@ -18,7 +18,7 @@ public class Table implements Cloneable, Comparable<Table> {
         this.index = index;
     }else {
             throw new IllegalArgumentException
-                    ("Enter size and index larger than or equal to 0");
+                    ("Enter Table size and index larger than or equal to 0");
         }
 
     }

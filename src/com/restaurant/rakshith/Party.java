@@ -12,12 +12,19 @@ public class Party implements Cloneable, Comparable<Party>{
     private boolean beingServed;
 
     public Party(String name, int size) {
-        if(name!=null && !name.isEmpty() ||size>0) {
+        if(name!=null && !name.isEmpty())
+        {
             this.name = name;
+        }else{
+            throw new IllegalArgumentException("Please enter correct party name.");
+        }
+        if(size>0){
             this.size = size;
-        }else throw new IllegalArgumentException("Enter Correct name & Size");
+        }else {
+            throw new IllegalArgumentException("Please enter correct party size.");
+        }
+        beingServed=false;
     }
-
 
     public int getSize() {
         return size;
@@ -27,7 +34,7 @@ public class Party implements Cloneable, Comparable<Party>{
         this.size = size;
     }
 
-    public boolean isBeingServed() {
+    public boolean getBeingServed() {
         return beingServed;
     }
 
@@ -89,7 +96,7 @@ public class Party implements Cloneable, Comparable<Party>{
     public String toString() {
 
         return "Party Name: "+name + " whose size is: "+ size +
-                (isBeingServed()? " who is being served.":" who is not served.");
+                (getBeingServed()? " who is being served.":" who is not served.");
     }
 
     @Override
