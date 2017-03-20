@@ -13,14 +13,19 @@ public class Table implements Cloneable, Comparable<Table> {
     private int capacity;
 
     public Table(int id, int index) {
-        if(id<0||index<0){
-        this.id = id;
+        if(id>0) {
+            this.id = id;
+        }else{
+            throw new IllegalArgumentException
+                    ("Enter Table id larger than or equal to 0");
+        }
+
+        if(index>0){
         this.index = index;
     }else {
             throw new IllegalArgumentException
-                    ("Enter Table size and index larger than or equal to 0");
+                    ("Enter table index larger than or equal to 0");
         }
-
     }
 
     Party getParty(){

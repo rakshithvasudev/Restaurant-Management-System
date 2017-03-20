@@ -14,8 +14,7 @@ import java.io.*;
 public class RestaurantTextUI {
 	// file name from which to read the restaurant data
 	private static final String DEFAULT_RESTAURANT_FILENAME = "tables.txt";
-	
-	/**
+ 	/**
 	 * Constructs a new text user interface for managing a restaurant.
 	 */
 	public RestaurantTextUI() {

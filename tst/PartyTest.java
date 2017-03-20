@@ -41,11 +41,12 @@ public class PartyTest {
         parties.add(aParty);
         parties.add(bParty);
         parties.add(copyParty);
-        Table table1 = new Table(1,0);
+        Table table1 = new Table(1,1);
         tables.add(table1);
 
         // Then (Assertion)
         Assert.assertEquals("Sorry, Test failed",aParty.checkRepeatedNames(tables,parties,"aParty"),true);
+        Assert.assertEquals("Sorry test failed", bParty.checkRepeatedNames(tables,parties,"bParty"),true);
     }
 
 
@@ -99,4 +100,38 @@ public class PartyTest {
         Assert.assertEquals("Sorry, Being served test failed",aParty.getBeingServed(),false);
         Assert.assertEquals("Sorry, Being served test failed",bParty.getBeingServed(),true);
     }
+
+    @Test
+    public void getSizeTest(){
+        //Given (Arrange)
+        Party aParty = new Party("aParty",4);
+
+        //When(Action)
+         aParty.setSize(6);
+
+        //Assert
+        Assert.assertEquals("Sorry, Being served test failed",aParty.getSize(),6);
+    }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getSizeCornerTest(){
+        //Given (Arrange)
+        Party sPartyCorner = new Party("aParty",0);
+
+        //When(Action)
+        sPartyCorner.setSize(5);
+
+        //Assert
+        Assert.assertEquals("Size Corner Test Failed!",sPartyCorner.getSize(),5);
+    }
+
+
+
+
+
+
+
+
+
 }
