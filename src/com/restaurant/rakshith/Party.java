@@ -44,13 +44,14 @@ public class Party implements Cloneable, Comparable<Party>{
 
     public boolean checkRepeatedNames(List<Table> tablesServed, List<Party> waitList, String nameToCheck) {
         for (Table tableItem : tablesServed) {
-            if (tableItem.getOccupiedStatus() && tableItem.getParty().getName().compareTo(nameToCheck) == 0) {
+            if (tableItem.getOccupiedStatus() &&
+                    tableItem.getParty().getName().equals(nameToCheck)) {
                 return true;
             }
         }
 
         for (Party partyItem : waitList) {
-            if (partyItem.getName().compareTo(nameToCheck) == 0) {
+            if (partyItem.getName().equals(nameToCheck)) {
                 return true;
             }
         }
@@ -77,7 +78,7 @@ public class Party implements Cloneable, Comparable<Party>{
 
             return beingServed == equalsParty.beingServed &&
                     size == equalsParty.size &&
-                    name.compareTo(equalsParty.name) == 0;
+                    name.equals(equalsParty.name);
         }
         return false;
     }

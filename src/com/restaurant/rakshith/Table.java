@@ -28,8 +28,12 @@ public class Table implements Cloneable, Comparable<Table> {
         }
     }
 
-    Party getParty(){
+    public Party getParty(){
         return party;
+    }
+
+    public void setParty(Party party){
+        this.party = party;
     }
 
     public boolean getOccupiedStatus() {
