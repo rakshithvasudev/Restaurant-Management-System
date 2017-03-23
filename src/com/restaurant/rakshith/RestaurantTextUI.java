@@ -3,6 +3,8 @@ package com.restaurant.rakshith;// Restaurant Homework
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
 import java.io.*;
+import java.util.*;
+import java.util.Scanner;
 // import java.util.*;
 
 /**
@@ -14,15 +16,13 @@ import java.io.*;
 public class RestaurantTextUI {
 	// file name from which to read the restaurant data
 	private static final String DEFAULT_RESTAURANT_FILENAME = "tables.txt";
+    private Restaurant restaurant;
  	/**
 	 * Constructs a new text user interface for managing a restaurant.
 	 */
 	public RestaurantTextUI() {
 		System.out.println("Restaurant Simulator");
-
-		// TODO: initialization code can go here
-		crash("initialization code");
-	}
+    }
 	
 	/**
 	 * Reads the information about the restaurant from the default restaurant
@@ -36,14 +36,33 @@ public class RestaurantTextUI {
 
 		// TODO: read restaurant info from tables file;
 		// return true if it was successful and false if not
-		crash("read restaurant info from tables file: " + restaurantFile);
 
-		// when there is an error reading the file,
-		System.out.println("Unable to read restaurant data: file not found.");
-		
-		System.out.println();
+        StringBuilder restaurantName = new StringBuilder();
+		StringBuilder numbersSb = new StringBuilder();
+
+		try {
+			Scanner in = new Scanner(new File("tables.txt"));
+			while (in.hasNext("[A-Za-z]+")) {
+				restaurantName.append(in.next("[0-9]+"));
+				numbersSb.append(in.next("[a-zA-Z]+").trim());
+			}
+			restaurant = new Restaurant(restaurantName.toString());
+		}catch (FileNotFoundException e) {
+			// when there is an error reading the file,
+			System.out.println("Unable to read restaurant data: File not Found.");
+             e.printStackTrace();
+            return false;
+		}
+
+		for (int i = 0; i < numbersSb.length(); i++) {
+			if (Character.getNumericValue(numbersSb.charAt(i)) != -1) {
+				restaurant.addTable(new Table(++Table.index,
+                        Character.getNumericValue(numbersSb.charAt(i))));
+			}
+		}
+
 		return true;
-	}
+    }
 	
 	/**
 	 * Displays the main menu of choices and prompts the user to enter a choice.

@@ -8,11 +8,11 @@ public class Table implements Cloneable, Comparable<Table> {
     private int id;
     private boolean occupiedStatus;
     private Servers server;
-    private int index;
+    public static int index=0;
     private Party party;
     private int capacity;
 
-    public Table(int id, int index) {
+    public Table(int id, int capacity) {
         if(id>0) {
             this.id = id;
         }else{
@@ -20,11 +20,11 @@ public class Table implements Cloneable, Comparable<Table> {
                     ("Enter Table id larger than or equal to 0");
         }
 
-        if(index>0){
-        this.index = index;
+        if(capacity>0){
+        this.capacity = index;
     }else {
             throw new IllegalArgumentException
-                    ("Enter table index larger than or equal to 0");
+                    ("Enter table size larger than or equal to 0");
         }
     }
 

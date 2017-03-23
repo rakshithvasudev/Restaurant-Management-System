@@ -78,4 +78,8 @@ public class Restaurant {
         System.out.println("Couldn't map");
     }
 
+    public void addTable(Table table){
+        tables.put(table.getId(),table);
+    }
+
 }
