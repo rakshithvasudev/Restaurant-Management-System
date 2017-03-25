@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class RestaurantTextUI {
 	// file name from which to read the restaurant data
 	private static final String DEFAULT_RESTAURANT_FILENAME = "tables.txt";
-    private Restaurant restaurant;
+    private  Restaurant restaurant;
  	/**
 	 * Constructs a new text user interface for managing a restaurant.
 	 */
@@ -37,12 +37,14 @@ public class RestaurantTextUI {
 		// TODO: read restaurant info from tables file;
 		// return true if it was successful and false if not
 
-        StringBuilder restaurantName = new StringBuilder();
+
+
+		StringBuilder restaurantName = new StringBuilder();
 		StringBuilder numbersSb = new StringBuilder();
 
 		try {
 			Scanner in = new Scanner(new File("tables.txt"));
-			while (in.hasNext("[A-Za-z]+")) {
+			while (in.hasNext("[A-Za-z]")) {
 				restaurantName.append(in.next("[0-9]+"));
 				numbersSb.append(in.next("[a-zA-Z]+").trim());
 			}

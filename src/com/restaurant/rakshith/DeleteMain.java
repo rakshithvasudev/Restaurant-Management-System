@@ -1,9 +1,10 @@
 package com.restaurant.rakshith;
 
-import java.io.CharArrayReader;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.*;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 
 /**
  * Created by Rakshith on 3/19/2017.
@@ -26,27 +27,35 @@ public class DeleteMain {
 ////        System.out.println(joe.getName());
 
 
+        Restaurant restaurant = new Restaurant("El-Monte Grill");
         StringBuilder restaurantName = new StringBuilder();
-        List<Integer> number = new ArrayList<>();
         StringBuilder numbersSb = new StringBuilder();
+        ArrayList<Table> t = new ArrayList<>();
 
         try {
-            Scanner in = new Scanner(new File("tables.txt"));
-            while (in.hasNext("[A-Za-z]+")) {
-                restaurantName.append(in.next("[0-9]+"));
-                numbersSb.append(in.next("[a-zA-Z]+").trim());
+            Scanner in = new Scanner(new File("tables.txt")).useDelimiter("\\n");
+            for (int i = 0; i < 2; i++) {
+                if (i == 0)
+                    restaurantName.append(in.next());
+                else if (i == 1)
+                    numbersSb.append(in.next());
             }
-        } catch (Exception e) {
+            restaurant.setName(restaurantName.toString());
+
+        } catch (FileNotFoundException e) {
+            // when there is an error reading the file,
+            System.out.println("Unable to read restaurant data: File not Found.");
             e.printStackTrace();
         }
 
-        System.out.println(restaurantName.toString());
+
         for (int i = 0; i < numbersSb.length(); i++) {
             if (Character.getNumericValue(numbersSb.charAt(i)) != -1) {
-                number.add(Character.getNumericValue(numbersSb.charAt(i)));
+                t.add(new Table(++Table.index,
+                        Character.getNumericValue(numbersSb.charAt(i))));
             }
         }
-        System.out.println(number.toString());
+        
     }
 }
 

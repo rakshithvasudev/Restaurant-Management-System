@@ -67,7 +67,7 @@ public class Restaurant {
                     System.out.println("Party Seated at :"+ tableItem);
                 } else if (diff > 0 &&
                         diff < (tableCapacities.get(nextHigherAvailableTableIndex) -
-                                tableItem.getCapacity())) {
+                        tableItem.getCapacity())) {
                     tableItem.setParty(party);
                     tableItem.setOccupiedStatus(true);
                     System.out.println("Party Seated at :"+ tableItem);
@@ -82,4 +82,12 @@ public class Restaurant {
         tables.put(table.getId(),table);
     }
 
+    public Map<Integer, Table> getTables() {
+        return tables;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
