@@ -42,7 +42,7 @@ public class DeleteMain {
             }
             restaurant.setName(restaurantName.toString());
 
-        } catch (FileNotFoundException e) {
+        }catch (FileNotFoundException e) {
             // when there is an error reading the file,
             System.out.println("Unable to read restaurant data: File not Found.");
             e.printStackTrace();
@@ -53,12 +53,12 @@ public class DeleteMain {
              restaurant.addTable(new Table(++Table.index, Character.getNumericValue(numbersSb.charAt(i))));
         }
 
-        for (int i=0;i<numbersSb.length();i+=2)
+        for (int i=0;i<numbersSb.length();i+=2) {
             System.out.println(numbersSb.charAt(i));
+        }
 
 
-
-        System.out.println(restaurant.getTables());
+        //System.out.println(restaurant.getTables());
 
     }
 }
