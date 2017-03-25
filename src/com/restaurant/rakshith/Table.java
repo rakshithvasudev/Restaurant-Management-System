@@ -21,7 +21,7 @@ public class Table implements Cloneable, Comparable<Table> {
         }
 
         if(capacity>0){
-        this.capacity = index;
+        this.capacity = capacity;
     }else {
             throw new IllegalArgumentException
                     ("Enter table size larger than or equal to 0");
@@ -120,9 +120,9 @@ public class Table implements Cloneable, Comparable<Table> {
 
     @Override
     public String toString() {
-        return "Table id: "+ id+ "occupied status: " +
+        return "Table id: "+ id+ " occupied status: " +
                 (occupiedStatus?" occupied by("+ party.getName()+" , "+
-                        party.getSize()+")":"Not Occupied");
+                        party.getSize()+")":" Not Occupied ") + " Capacity :"+capacity +"\n";
 }
 
     @Override

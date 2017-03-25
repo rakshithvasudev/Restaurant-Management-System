@@ -49,13 +49,17 @@ public class DeleteMain {
         }
 
 
-        for (int i = 0; i < numbersSb.length(); i++) {
-            if (Character.getNumericValue(numbersSb.charAt(i)) != -1) {
-                t.add(new Table(++Table.index,
-                        Character.getNumericValue(numbersSb.charAt(i))));
-            }
+        for (int i = 0; i < numbersSb.length(); i+=2) {
+             restaurant.addTable(new Table(++Table.index, Character.getNumericValue(numbersSb.charAt(i))));
         }
-        
+
+        for (int i=0;i<numbersSb.length();i+=2)
+            System.out.println(numbersSb.charAt(i));
+
+
+
+        System.out.println(restaurant.getTables());
+
     }
 }
 
