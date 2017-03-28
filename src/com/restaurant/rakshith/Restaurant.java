@@ -12,23 +12,24 @@ public class Restaurant {
     private Map<Integer, Servers> servers;
     private Map<Servers, List<Table>> allocations;
     private String name;
+    private double cashRegister;
 
     public Restaurant(String name) {
         tables = new LinkedHashMap<>();
         waitList = new LinkedHashMap<>();
         servers = new LinkedHashMap<>();
         allocations = new LinkedHashMap<>();
-
+        cashRegister=0.0;
         if (name != null && !name.isEmpty()) {
             this.name = name;
         } else {
             throw new IllegalArgumentException("Enter correct value for restaurant name");
         }
-
     }
 
     /**
      * This method places the party in the right table.
+     *
      * @param party the party supposed to be seated.
      */
     public void optimizedTableMapping(Party party) {
@@ -44,7 +45,7 @@ public class Restaurant {
                     currentTable.getCapacity() == party.getSize()) {
                 currentTable.setParty(party);
                 currentTable.setOccupiedStatus(true);
-                setTheParty=true;
+                setTheParty = true;
                 System.out.println("Party seated at " + currentTable);
                 break;
             }
@@ -57,27 +58,26 @@ public class Restaurant {
             //get the next table and compare the capacity.
             Table nextTable = tableList.get(currentIndex + 1);
             //if the currentTable is unoccupied and the current table's
-            //capacity exceeds the party size,
+            //capacity exceeds the party size, set the party.
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() > party.getSize()) {
                 if (nextTable.getCapacity() - currentTable.getCapacity() >= 0) {
                     currentTable.setParty(party);
                     currentTable.setOccupiedStatus(true);
                     System.out.println("Party seated at " + currentTable);
-                    setTheParty=true;
+                    setTheParty = true;
                     break;
                 }
             }
             currentIndex++;
         }
-        if(!setTheParty){
-            System.out.println("Sorry! can't serve this party: " +party.getName());
+        if (!setTheParty) {
+            System.out.println("Sorry! can't serve this party: " + party.getName());
         }
-
     }
 
-    public void addTable(Table table){
-        tables.put(table.getId(),table);
+    public void addTable(Table table) {
+        tables.put(table.getId(), table);
     }
 
     public Map<Integer, Table> getTables() {
@@ -86,5 +86,59 @@ public class Restaurant {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getServerCountOnDuty() {
+        int onDutyCount = 0;
+        for (Servers currentServer : servers.values()) {
+            if (currentServer.getOnDuty())
+                onDutyCount++;
+        }
+        return onDutyCount;
+    }
+
+    public void addServer(Servers server) {
+        servers.put(server.getId(), server);
+    }
+
+    public Map<Integer, Servers> getServers() {
+        return servers;
+    }
+
+    public void addToWaitList(Party party) {
+        waitList.put(party.getName(), party);
+    }
+
+    public void removeFromWaitList(Party party) {
+        waitList.remove(party.getName());
+    }
+
+    public void removeTable(Table table) {
+        tables.remove(table.getId());
+    }
+
+    public int getBiggestTableSize() {
+        int largestSize = 0;
+        for (Table currentTable : tables.values())
+            if (currentTable.getCapacity() > largestSize)
+                largestSize = currentTable.getCapacity();
+        return largestSize;
+    }
+
+    public int getBiggestTableUsable() {
+        int largestSize = 0;
+          for (Table currentTable : tables.values())
+            if (currentTable.getCapacity() > largestSize &&
+                    !currentTable.getOccupiedStatus())
+                largestSize = currentTable.getCapacity();
+        return largestSize;
+    }
+
+    public void addToCashRegister(double value){
+        cashRegister+=value;
+    }
+
+    public boolean canServerWork(Servers server){
+        return server.getOnDuty();
     }
 }
