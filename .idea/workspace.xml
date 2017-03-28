@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1338">
-              <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state relative-caret-position="1179">
+              <caret line="144" column="34" lean-forward="false" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
               <folding>
                 <element signature="e#2867#2868#0" expanded="true" />
                 <element signature="e#3352#3353#0" expanded="true" />
@@ -47,8 +48,19 @@
                 <element signature="e#3767#3768#0" expanded="true" />
                 <element signature="e#4418#4419#0" expanded="true" />
                 <element signature="e#4453#4454#0" expanded="true" />
-                <element signature="e#4504#4505#0" expanded="true" />
-                <element signature="e#4545#4546#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Servers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+              <folding>
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +99,18 @@
       <file leaf-file-name="RestaurantTextUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3021">
-              <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+            <state relative-caret-position="-3127">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scanner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Scanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12349">
+              <caret line="238" column="11" lean-forward="false" selection-start-line="238" selection-start-column="11" selection-end-line="238" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -106,6 +128,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>party</find>
+      <find>scanner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,8 +150,8 @@
         <option value="$PROJECT_DIR$/tst/RestaurantTest.java" />
         <option value="$PROJECT_DIR$/tables.txt" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Table.java" />
-        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" />
+        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
       </list>
     </option>
@@ -812,7 +835,7 @@
       <workItem from="1490476189732" duration="4504000" />
       <workItem from="1490500714320" duration="748000" />
       <workItem from="1490565860323" duration="1865000" />
-      <workItem from="1490673288213" duration="5981000" />
+      <workItem from="1490673288213" duration="8282000" />
     </task>
     <servers />
   </component>
@@ -849,7 +872,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114953000" />
+    <option name="totallyTimeSpent" value="117254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
@@ -904,14 +927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3021">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -944,10 +959,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12349">
+          <caret line="238" column="11" lean-forward="false" selection-start-line="238" selection-start-column="11" selection-end-line="238" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3127">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1338">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state relative-caret-position="1179">
+          <caret line="144" column="34" lean-forward="false" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
           <folding>
             <element signature="e#2867#2868#0" expanded="true" />
             <element signature="e#3352#3353#0" expanded="true" />
@@ -962,8 +1004,6 @@
             <element signature="e#3767#3768#0" expanded="true" />
             <element signature="e#4418#4419#0" expanded="true" />
             <element signature="e#4453#4454#0" expanded="true" />
-            <element signature="e#4504#4505#0" expanded="true" />
-            <element signature="e#4545#4546#0" expanded="true" />
           </folding>
         </state>
       </provider>

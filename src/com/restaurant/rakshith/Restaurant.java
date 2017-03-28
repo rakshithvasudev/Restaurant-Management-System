@@ -139,6 +139,11 @@ public class Restaurant {
     }
 
     public boolean canServerWork(Servers server){
+      //if a there are x servers working, this server can work only
+        // if this server serves 1 less than the number of available servers. i.e <x-1
+        //return server.getTablesServed().size()<servers.size()-1;
         return server.getOnDuty();
     }
+
+
 }

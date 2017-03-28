@@ -3,9 +3,7 @@ package com.restaurant.rakshith;// Restaurant Homework
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
 import java.io.*;
-import java.util.*;
-import java.util.Scanner;
-// import java.util.*;
+
 
 /**
  * This class represents the text user interface (UI) for the restaurant
