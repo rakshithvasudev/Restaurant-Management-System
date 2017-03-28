@@ -80,10 +80,6 @@ public class Restaurant {
         tables.put(table.getId(), table);
     }
 
-    public Map<Integer, Table> getTables() {
-        return tables;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -99,10 +95,6 @@ public class Restaurant {
 
     public void addServer(Servers server) {
         servers.put(server.getId(), server);
-    }
-
-    public Map<Integer, Servers> getServers() {
-        return servers;
     }
 
     public void addToWaitList(Party party) {
@@ -141,9 +133,43 @@ public class Restaurant {
     public boolean canServerWork(Servers server){
       //if a there are x servers working, this server can work only
         // if this server serves 1 less than the number of available servers. i.e <x-1
-        //return server.getTablesServed().size()<servers.size()-1;
-        return server.getOnDuty();
+        return server.getTablesServed().size()<servers.size()-1;
+        //return server.getOnDuty();
     }
 
+    public int getEmptyTables(){
+       int emptyTableCount=0;
+        for (Table currentTable:tables.values())
+            if(!currentTable.getOccupiedStatus())
+                emptyTableCount++;
+        return emptyTableCount;
+    }
 
+    public Map<String, Party> getWaitList() {
+        return waitList;
+    }
+
+    public Map<Integer, Table> getTables() {
+        return tables;
+    }
+
+    public double getCashRegister() {
+        return cashRegister;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Map<Servers, List<Table>> getAllocations() {
+        return allocations;
+    }
+
+    public Map<Integer, Servers> getServers() {
+        return servers;
+    }
+
+    public void addToAllocations(Servers server,List<Table> tables){
+        allocations.put(server,tables);
+    }
 }
