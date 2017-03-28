@@ -1,9 +1,7 @@
 package com.restaurant.rakshith;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.Scanner;
+
 
 /**
  * Created by Rakshith on 3/19/2017.
@@ -29,53 +27,53 @@ public class Restaurant {
 
     }
 
+    /**
+     * This method places the party in the right table.
+     * @param party the party supposed to be seated.
+     */
     public void optimizedTableMapping(Party party) {
+        List<Table> tableList = new ArrayList<>(tables.values());
+        Collections.sort(tableList);
+        Iterator tableIterator = tableList.iterator();
+        int currentIndex = 0;
+        boolean setTheParty = false;
+        while (tableIterator.hasNext()) {
+            //Use the iterator to iterate through the available tables.
+            Table currentTable = (Table) tableIterator.next();
+            if (!currentTable.getOccupiedStatus() &&
+                    currentTable.getCapacity() == party.getSize()) {
+                currentTable.setParty(party);
+                currentTable.setOccupiedStatus(true);
+                setTheParty=true;
+                System.out.println("Party seated at " + currentTable);
+                break;
+            }
 
-        List<Integer> tableCapacities = new ArrayList<>();
-        try {
-            Scanner in = new Scanner(new File("tables.txt"));
-            while (in.hasNext()) {
-                if (in.hasNextInt()) {
-                    tableCapacities.add(in.nextInt());
-                } else {
-                    in.next();
+            //Fix any indexOutOfBoundsExceptions that might occur.
+            if (currentIndex + 1 > tableList.size() - 1) {
+                currentIndex--;
+            }
+
+            //get the next table and compare the capacity.
+            Table nextTable = tableList.get(currentIndex + 1);
+            //if the currentTable is unoccupied and the current table's
+            //capacity exceeds the party size,
+            if (!currentTable.getOccupiedStatus() &&
+                    currentTable.getCapacity() > party.getSize()) {
+                if (nextTable.getCapacity() - currentTable.getCapacity() >= 0) {
+                    currentTable.setParty(party);
+                    currentTable.setOccupiedStatus(true);
+                    System.out.println("Party seated at " + currentTable);
+                    setTheParty=true;
+                    break;
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            currentIndex++;
+        }
+        if(!setTheParty){
+            System.out.println("Sorry! can't serve this party: " +party.getName());
         }
 
-        Collections.sort(tableCapacities);
-
-        for (Table tableItem : tables.values()) {
-            if (!tableItem.getOccupiedStatus() && tableItem.getCapacity() >= party.getSize()) {
-                int tableCapacity = tableItem.getCapacity();
-                int partySize = party.getSize();
-                int diff = tableCapacity - partySize;
-                int currentSelectedTableIndex = tableCapacities.indexOf(tableItem.getCapacity());
-                int nextHigherAvailableTableIndex = currentSelectedTableIndex++;
-
-
-                while (tableCapacities.get(nextHigherAvailableTableIndex).
-                        equals(tableCapacities.get(currentSelectedTableIndex))) {
-                    nextHigherAvailableTableIndex++;
-                }
-
-                if (diff == 0) {
-                    tableItem.setParty(party);
-                    tableItem.setOccupiedStatus(true);
-                    System.out.println("Party Seated at :"+ tableItem);
-                } else if (diff > 0 &&
-                        diff < (tableCapacities.get(nextHigherAvailableTableIndex) -
-                        tableItem.getCapacity())) {
-                    tableItem.setParty(party);
-                    tableItem.setOccupiedStatus(true);
-                    System.out.println("Party Seated at :"+ tableItem);
-                }
-            }
-        }
-
-        System.out.println("Couldn't map");
     }
 
     public void addTable(Table table){
@@ -85,7 +83,6 @@ public class Restaurant {
     public Map<Integer, Table> getTables() {
         return tables;
     }
-
 
     public void setName(String name) {
         this.name = name;

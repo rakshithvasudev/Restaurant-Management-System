@@ -11,8 +11,11 @@ import java.util.regex.Pattern;
  */
 public class DeleteMain {
     public static void main(String[] args) {
-//        Party joe = new Party("Joe's Party",5);
-//        Party ronald = new Party("Ronald's Party",4);
+        Party joe = new Party("Joe's Party",4);
+        Party ronald = new Party("Ronald's Party",5);
+        Party ray = new Party("Ray's Party",5);
+        Party donald = new Party("Donald",3);
+        Party big = new Party("Large party",52);
 //
 //        Table table1 = new Table(1,5);
 //        table1.setCapacity(6);
@@ -23,14 +26,13 @@ public class DeleteMain {
 //        Restaurant mcd = new Restaurant("Mcd");
 //        mcd.optimizedTableMapping(joe);
 //
-////        System.out.println(table1.getParty().getName());
-////        System.out.println(joe.getName());
+        //System.out.println(table1.getParty().getName());
+        //System.out.println(joe.getName());
 
 
         Restaurant restaurant = new Restaurant("El-Monte Grill");
         StringBuilder restaurantName = new StringBuilder();
         StringBuilder numbersSb = new StringBuilder();
-        ArrayList<Table> t = new ArrayList<>();
 
         try {
             Scanner in = new Scanner(new File("tables.txt")).useDelimiter("\\n");
@@ -53,13 +55,12 @@ public class DeleteMain {
              restaurant.addTable(new Table(++Table.index, Character.getNumericValue(numbersSb.charAt(i))));
         }
 
-        for (int i=0;i<numbersSb.length();i+=2) {
-            System.out.println(numbersSb.charAt(i));
-        }
 
-
-        //System.out.println(restaurant.getTables());
-
+        restaurant.optimizedTableMapping(ronald);
+        restaurant.optimizedTableMapping(joe);
+        restaurant.optimizedTableMapping(ray);
+        restaurant.optimizedTableMapping(donald);
+        restaurant.optimizedTableMapping(big);
     }
 }
 

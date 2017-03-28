@@ -10,17 +10,18 @@ import java.util.Scanner;
 /**
  * This class represents the text user interface (UI) for the restaurant
  * program, allowing the user to view and manage the restaurant and its objects.
- * @author Your name
- * @version Put version
+ * @author Rakshith
+ * @version 1.0.0
  */
 public class RestaurantTextUI {
 	// file name from which to read the restaurant data
 	private static final String DEFAULT_RESTAURANT_FILENAME = "tables.txt";
-    private  Restaurant restaurant;
+    private  Restaurant restaurant ;
  	/**
 	 * Constructs a new text user interface for managing a restaurant.
 	 */
 	public RestaurantTextUI() {
+		restaurant = new Restaurant("Sample Restaurant");
 		System.out.println("Restaurant Simulator");
     }
 	
@@ -36,34 +37,33 @@ public class RestaurantTextUI {
 
 		// TODO: read restaurant info from tables file;
 		// return true if it was successful and false if not
-
-
-
-		StringBuilder restaurantName = new StringBuilder();
+        StringBuilder restaurantName = new StringBuilder();
 		StringBuilder numbersSb = new StringBuilder();
 
 		try {
-			Scanner in = new Scanner(new File("tables.txt"));
-			while (in.hasNext("[A-Za-z]")) {
-				restaurantName.append(in.next("[0-9]+"));
-				numbersSb.append(in.next("[a-zA-Z]+").trim());
+			Scanner in = new Scanner(restaurantFile).useDelimiter("\\n");
+			for (int i = 0; i < 2; i++) {
+				if (i == 0){
+					restaurantName.append(in.next());
+				}
+				else if (i == 1){
+					numbersSb.append(in.next());
+				}
 			}
-			restaurant = new Restaurant(restaurantName.toString());
+			//If there was a name specified change it to that new name.
+			restaurant.setName(restaurantName.toString());
 		}catch (FileNotFoundException e) {
 			// when there is an error reading the file,
 			System.out.println("Unable to read restaurant data: File not Found.");
-             e.printStackTrace();
-            return false;
+			e.printStackTrace();
+			return false;
 		}
 
-		for (int i = 0; i < numbersSb.length(); i++) {
-			if (Character.getNumericValue(numbersSb.charAt(i)) != -1) {
-				restaurant.addTable(new Table(++Table.index,
-                        Character.getNumericValue(numbersSb.charAt(i))));
-			}
-		}
 
-		return true;
+		for (int i = 0; i < numbersSb.length(); i+=2) {
+			restaurant.addTable(new Table(++Table.index, Character.getNumericValue(numbersSb.charAt(i))));
+		}
+        return true;
     }
 	
 	/**

@@ -74,7 +74,6 @@ public class Table implements Cloneable, Comparable<Table> {
         occupiedStatus=false;
     }
 
-
     @Override
     public int hashCode() {
         int a = 743;
