@@ -20,6 +20,7 @@ public final class Servers implements Cloneable, Comparable<Servers>{
         tablesServed=new LinkedHashMap<>();
         this.id = id;
         this.onDuty = onDuty;
+        tips=0.0;
     }
 
 
@@ -62,7 +63,7 @@ public final class Servers implements Cloneable, Comparable<Servers>{
     }
 
     public void setTips(double tips) {
-        this.tips = tips;
+        this.tips+= tips;
     }
 
     @Override

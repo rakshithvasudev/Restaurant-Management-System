@@ -71,7 +71,7 @@ public class DeleteMain {
 
 
 
-
+//
 //        restaurant.optimizedTableMapping(ronald);
 //        restaurant.optimizedTableMapping(joe);
 //        restaurant.optimizedTableMapping(ray);

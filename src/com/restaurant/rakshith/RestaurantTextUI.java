@@ -3,10 +3,7 @@ package com.restaurant.rakshith;// Restaurant Homework
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -146,6 +143,8 @@ public class RestaurantTextUI {
 		restaurant.addServer(new Servers(++Servers.addServerIndex,true));
         System.out.println("There are "+ restaurant.getServerCountOnDuty()
         + " Servers on duty");
+
+
     }
 	
 	// Called when D key is pressed from main menu.
@@ -218,25 +217,52 @@ public class RestaurantTextUI {
 		double subtotal = ValidInputReader.getValidDouble("Bill subtotal?", 0.0, 9999.99);
 		double tip = ValidInputReader.getValidDouble("Tip?", 0.0, 9999.99);
 
-		Party party = null;
+
+		Table selectedTable=null;
 
 		for (Table currentTable: restaurant.getTables().values())
-		    if(currentTable.getParty().getName().equalsIgnoreCase(partyName))
-		        
+		    if(currentTable.getParty().getName().equalsIgnoreCase(partyName)) {
+                selectedTable = currentTable.clone();
+            }
+            else{
+                // when such a party is NOT sitting at a table in the restaurant,
+                System.out.println("There is no party by that name.");
+                crash("check, please");
+            }
 
-		// TODO: give tip to server, e.g.:
+        // TODO: give tip to server, e.g.:
 		// Gave tip of $9.50 to Servers #2.
-			
+        try{
+            if(selectedTable.getServer()!=null)
+                selectedTable.getServer().setTips(tip);
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
+
 		// update restaurant's cash register, e.g.
-		// Gave total of $39.75 to cash register.
-		
+        // Gave total of $39.75 to cash register.
+        restaurant.addToCashRegister(0.1*subtotal+subtotal);
 		System.out.println("Seating from waiting list:");
 		// when a party on the waiting list can now be seated, e.g.:
 		// Table 6 (6-top): Erickson party of 5 - Servers #2
-		
-		// when such a party is NOT sitting at a table in the restaurant,
-		System.out.println("There is no party by that name.");
-		crash("check, please");
+
+        //Removes the Party element from waitList after shifting from WaitList
+        //to Regular table. This is an infinite loop just to keep trying until
+        //there is a party who gets mapped appropriately.
+        //Ex: if the first party in the list was not mapped, then
+        //it tries to map the second party and so on until there is a mapping or
+        //there are no more elements in the waitList.
+        while(true){
+            Map.Entry<String, Party> waitListElement = restaurant.getWaitList().entrySet().iterator().next();
+            if (restaurant.optimizedTableMapping(waitListElement.getValue())) {
+                System.out.println("Party from waitingList was seated");
+                restaurant.removeFromWaitList(waitListElement.getValue());
+                break;
+            }
+        }
+
+
+
 	}
 	
 	// Called when W key is pressed from main menu.

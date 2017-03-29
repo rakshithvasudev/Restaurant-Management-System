@@ -19,7 +19,7 @@ public final class Restaurant {
         waitList = new LinkedHashMap<>();
         servers = new LinkedHashMap<>();
         allocations = new LinkedHashMap<>();
-        cashRegister=0.0;
+        cashRegister = 0.0;
         if (name != null && !name.isEmpty()) {
             this.name = name;
         } else {
@@ -32,26 +32,26 @@ public final class Restaurant {
      * Prints where the Party was seated.
      * If that was not made possible, then a
      * not possible message is printed.
-     * @Pre  : The party is not null and has a practically finite number of
-     * people as members.
-     * @Post: Seats the Party in the most appropriate manner.
+     *
      * @param party the party supposed to be seated.
+     * @pre : The party is not null and has a practically finite number of
+     * people as members.
+     * @post: Seats the Party in the most appropriate manner
+     * as mentioned in the spec.
      */
-    public void optimizedTableMapping(Party party) {
+    public boolean optimizedTableMapping(Party party) {
         List<Table> tableList = new ArrayList<>(tables.values());
         Collections.sort(tableList);
         Iterator tableIterator = tableList.iterator();
         int currentIndex = 0;
-        boolean setTheParty = false;
         while (tableIterator.hasNext()) {
             Table currentTable = (Table) tableIterator.next();
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() == party.getSize()) {
                 currentTable.setParty(party);
                 currentTable.setOccupiedStatus(true);
-                setTheParty = true;
-                System.out.println("Party seated at " + currentTable);
-                break;
+                //System.out.println("Party seated at " + currentTable);
+                return true;
             }
             //Fix any indexOutOfBoundsExceptions that might occur.
             if (currentIndex + 1 > tableList.size() - 1)
@@ -65,14 +65,13 @@ public final class Restaurant {
                 if (nextTable.getCapacity() - currentTable.getCapacity() >= 0) {
                     currentTable.setParty(party);
                     currentTable.setOccupiedStatus(true);
-                    System.out.println("Party seated at " + currentTable);
-                    setTheParty = true;
-                    break;
+                    //System.out.println("Party seated at " + currentTable);
+                    return true;
                 }
             currentIndex++;
         }
-        if (!setTheParty)
-            System.out.println("Sorry! can't serve this party: " + party.getName());
+
+        return false;
     }
 
     public void addTable(Table table) {
@@ -110,8 +109,9 @@ public final class Restaurant {
 
     /**
      * Gets the largest table in the Restaurant.
-     * @Pre: The tables field is not null.
+     *
      * @return largestSize in the available Map of Tables.
+     * @Pre: The tables field is not null.
      */
     public int getBiggestTableSize() {
         int largestSize = 0;
@@ -123,37 +123,39 @@ public final class Restaurant {
 
     /**
      * Gets the largest table in the Restaurant that's Unoccupied.
-     * @Pre: The tables field is not null.
+     *
      * @return the largestSize of the Unoccupied Tables.
+     * @Pre: The tables field is not null.
      */
     public int getBiggestTableUsable() {
         int largestSize = 0;
-          for (Table currentTable : tables.values())
+        for (Table currentTable : tables.values())
             if (currentTable.getCapacity() > largestSize &&
                     !currentTable.getOccupiedStatus())
                 largestSize = currentTable.getCapacity();
         return largestSize;
     }
 
-    public void addToCashRegister(double value){
-        cashRegister+=value;
+    public void addToCashRegister(double value) {
+        cashRegister += value;
     }
 
-    public boolean canServerWork(Servers server){
-      //if a there are x servers working, this server can work only
+    public boolean canServerWork(Servers server) {
+        //if a there are x servers working, this server can work only
         // if this server serves 1 less than the number of available servers. i.e <x-1
-        return server.getTablesServed().size()<servers.size()-1;
+        return server.getTablesServed().size() < servers.size() - 1;
         //return server.getOnDuty();
     }
 
     /**
      * Gets the number of emptyTables that are not being used by the Restaurant.
+     *
      * @return the number of emptyTables.
      */
-    public int getEmptyTables(){
-       int emptyTableCount=0;
-        for (Table currentTable:tables.values())
-            if(!currentTable.getOccupiedStatus())
+    public int getEmptyTables() {
+        int emptyTableCount = 0;
+        for (Table currentTable : tables.values())
+            if (!currentTable.getOccupiedStatus())
                 emptyTableCount++;
         return emptyTableCount;
     }
@@ -182,7 +184,7 @@ public final class Restaurant {
         return servers;
     }
 
-    public void addToAllocations(Servers server,List<Table> tables){
-        allocations.put(server,tables);
+    public void addToAllocations(Servers server, List<Table> tables) {
+        allocations.put(server, tables);
     }
 }
