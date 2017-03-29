@@ -191,8 +191,8 @@ public class RestaurantTextUI {
 
 		// TODO: display total money earned, e.g.:
 		// Total money earned = $877.50
-		crash("display cash register");
-	}
+        System.out.println("Total money earned = $"+restaurant.getCashRegister());
+    }
 	
 	// Called when T key is pressed from main menu.
 	// Displays the current status of all tables.
@@ -202,8 +202,11 @@ public class RestaurantTextUI {
 		// TODO: show restaurant's table statuses, e.g.:
 		// Table 5 (2-top): Jones party of 2 - Servers #2
 		// Table 6 (4-top): empty
-		crash("display tables status");
-	}
+
+        for (Table currentTable: restaurant.getTables().values())
+            System.out.println(currentTable);
+
+ 	}
 	
 	// Called when C key is pressed from main menu.
 	// Helps process a party's check to leave the restaurant.
@@ -214,7 +217,13 @@ public class RestaurantTextUI {
 		// when such a party is sitting at a table in the restaurant,
 		double subtotal = ValidInputReader.getValidDouble("Bill subtotal?", 0.0, 9999.99);
 		double tip = ValidInputReader.getValidDouble("Tip?", 0.0, 9999.99);
-		
+
+		Party party = null;
+
+		for (Table currentTable: restaurant.getTables().values())
+		    if(currentTable.getParty().getName().equalsIgnoreCase(partyName))
+		        
+
 		// TODO: give tip to server, e.g.:
 		// Gave tip of $9.50 to Servers #2.
 			

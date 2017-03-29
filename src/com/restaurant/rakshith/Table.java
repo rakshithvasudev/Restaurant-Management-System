@@ -121,7 +121,11 @@ public final class Table implements Cloneable, Comparable<Table> {
     public String toString() {
         return "Table id: "+ id+ " occupied status: " +
                 (occupiedStatus?" occupied by("+ party.getName()+" , "+
-                        party.getSize()+")":" Not Occupied ") + " Capacity :"+capacity +"\n";
+                        party.getSize()+")":" Not Occupied ") +
+                " Capacity :"+capacity
+                +"Served by : "
+                +(server==null?"None":"Server #"+server.getId())
+                +"\n";
 }
 
     @Override
