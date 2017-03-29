@@ -3,6 +3,7 @@ package com.restaurant.rakshith;// Restaurant Homework
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
 import java.io.*;
+import java.util.Map;
 
 
 /**
@@ -120,8 +121,9 @@ public class RestaurantTextUI {
 	// Displays all servers who are currently working.
 	private void serversOnDuty() {
 		System.out.println("Servers currently on duty:");
-
-		// TODO: display current servers, e.g.:
+		if(restaurant.getServers().size()==0)
+            System.out.println("None");
+        // TODO: display current servers, e.g.:
 		// Servers #1 ($49.76 in total tips)
         int counter=1;
         for(Servers currentServer: restaurant.getServers().values()){
@@ -147,13 +149,20 @@ public class RestaurantTextUI {
 	// Sends one server home for the night (if possible).
 	private void dismissServer() {
 		// when there are no servers,
+        if(restaurant.getServers().size()==0)
 		System.out.println("No servers to dismiss.");
 		
 		// when only one server remains with tables remaining,
-		System.out.println("Sorry, the server cannot cash out now;");
-		System.out.println("there are still tables remaining and this is the only server left.");
-		
+        if(restaurant.getServers().size()==1)
+            //Check if any table is occupied.
+               for (Table currentTable:restaurant.getTables().values())
+                if(currentTable.getOccupiedStatus()) {
+                    System.out.println("Sorry, the server cannot cash out now;");
+                    System.out.println("there are still tables remaining and this is the only server left.");
+                }
 		// when the server is able to be dismissed,
+        Map.Entry<Integer,Servers> idOfServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
+        restaurant.getServers().remove(idOfServerTobeDismissed.getKey());
 		System.out.println("Dismissing a server:");
 		
 		// TODO: cash out server and display current count of servers
