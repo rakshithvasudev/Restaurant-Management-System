@@ -252,13 +252,20 @@ public class RestaurantTextUI {
         //Ex: if the first party in the list was not mapped, then
         //it tries to map the second party and so on until there is a mapping or
         //there are no more elements in the waitList.
+
+        Iterator<Map.Entry<String, Party>> iterator =  restaurant.getWaitList().entrySet().iterator();
+        Map.Entry<String, Party> waitListElement = restaurant.getWaitList().entrySet().iterator().next();
+        int counter=0;
         while(true){
-            Map.Entry<String, Party> waitListElement = restaurant.getWaitList().entrySet().iterator().next();
+            if(counter!=0)
+            while (iterator.hasNext())
+             waitListElement = iterator.next();
             if (restaurant.optimizedTableMapping(waitListElement.getValue())) {
                 System.out.println("Party from waitingList was seated");
                 restaurant.removeFromWaitList(waitListElement.getValue());
                 break;
             }
+            counter++;
         }
 
 

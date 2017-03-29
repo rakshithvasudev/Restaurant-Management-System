@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +50,8 @@
       <file leaf-file-name="RestaurantTextUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="254" column="8" lean-forward="false" selection-start-line="254" selection-start-column="8" selection-end-line="254" selection-end-column="8" />
+            <state relative-caret-position="1099">
+              <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -908,7 +905,7 @@
       <workItem from="1490718961930" duration="170000" />
       <workItem from="1490728168294" duration="6427000" />
       <workItem from="1490741626919" duration="9000" />
-      <workItem from="1490748823829" duration="21240000" />
+      <workItem from="1490748823829" duration="21935000" />
     </task>
     <servers />
   </component>
@@ -945,7 +942,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145100000" />
+    <option name="totallyTimeSpent" value="145795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3856" height="2098" extended-state="0" />
@@ -1694,8 +1691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="254" column="8" lean-forward="false" selection-start-line="254" selection-start-column="8" selection-end-line="254" selection-end-column="8" />
+        <state relative-caret-position="1099">
+          <caret line="260" column="0" lean-forward="false" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
