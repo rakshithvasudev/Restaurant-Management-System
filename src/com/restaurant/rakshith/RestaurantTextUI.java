@@ -3,6 +3,9 @@ package com.restaurant.rakshith;// Restaurant Homework
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -161,16 +164,25 @@ public class RestaurantTextUI {
                     System.out.println("there are still tables remaining and this is the only server left.");
                 }
 		// when the server is able to be dismissed,
-        Map.Entry<Integer,Servers> idOfServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
-        restaurant.getServers().remove(idOfServerTobeDismissed.getKey());
+        Map.Entry<Integer,Servers> ServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
 		System.out.println("Dismissing a server:");
 		
 		// TODO: cash out server and display current count of servers
 		// Servers #2 cashes out with $47.95 in total tips.
-		// Servers now available: 3
-		
-		crash("dismiss a server");
-	}
+        // Servers now available: 3
+
+        System.out.println("Server #"+ServerTobeDismissed.getKey()+" cashes out with "
+                +"$"+ ServerTobeDismissed.getValue().getTips()+ "in total tips.");
+
+        //Assign the tables he was serving to the next server.
+        Map<Integer,Table> tablesServed= new LinkedHashMap<>(ServerTobeDismissed.getValue().getTablesServed());
+        restaurant.getServers().remove(ServerTobeDismissed.getKey());
+        Map.Entry<Integer,Servers> nextServer  = restaurant.getServers().entrySet().iterator().next();
+        nextServer.getValue().getTablesServed().putAll(tablesServed);
+
+        System.out.println("Servers now available: "+ restaurant.getServerCountOnDuty());
+
+    }
 	
 	// Called when R key is pressed from main menu.
 	// Displays how much money is in the restaurant's cash register.
