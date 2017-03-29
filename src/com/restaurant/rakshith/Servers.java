@@ -7,13 +7,13 @@ import java.util.Map;
 /**
  * Created by Rakshith on 3/17/2017.
  */
-public class Servers implements Cloneable, Comparable<Servers>{
+public final class Servers implements Cloneable, Comparable<Servers>{
 
     private int id;
     private boolean onDuty;
     private Map<Integer,Table> tablesServed;
     private double tips;
-    private int addServerIndex;
+    public static int addServerIndex=0;
 
 
     public Servers(int id, boolean onDuty) {

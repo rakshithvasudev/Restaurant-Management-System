@@ -19,7 +19,7 @@ public class RestaurantTextUI {
 	 * Constructs a new text user interface for managing a restaurant.
 	 */
 	public RestaurantTextUI() {
-		restaurant = new Restaurant("Sample Restaurant");
+		restaurant = new Restaurant("Rakshith's Restaurant");
 		System.out.println("Restaurant Simulator");
     }
 	
@@ -41,12 +41,11 @@ public class RestaurantTextUI {
 		try {
 			Scanner in = new Scanner(restaurantFile).useDelimiter("\\n");
 			for (int i = 0; i < 2; i++) {
-				if (i == 0){
+					if (i == 0){
 					restaurantName.append(in.next());
-				}
-				else if (i == 1){
+					}
+				else if (i == 1)
 					numbersSb.append(in.next());
-				}
 			}
 			//If there was a name specified change it to that new name.
 			restaurant.setName(restaurantName.toString());
@@ -56,12 +55,10 @@ public class RestaurantTextUI {
 			e.printStackTrace();
 			return false;
 		}
-
-
-		for (int i = 0; i < numbersSb.length(); i+=2) {
+		for (int i = 0; i < numbersSb.length(); i+=2)
 			restaurant.addTable(new Table(++Table.index, Character.getNumericValue(numbersSb.charAt(i))));
-		}
-        return true;
+
+		return true;
     }
 	
 	/**
@@ -123,10 +120,15 @@ public class RestaurantTextUI {
 	// Displays all servers who are currently working.
 	private void serversOnDuty() {
 		System.out.println("Servers currently on duty:");
-		
+
 		// TODO: display current servers, e.g.:
 		// Servers #1 ($49.76 in total tips)
-		crash("display current servers");
+        int counter=1;
+        for(Servers currentServer: restaurant.getServers().values()){
+            System.out.println("Servers #"+counter+" ($"+
+                    currentServer.getTips()+" in total tips)");
+            counter++;
+        }
 	}
 	
 	// Called when A key is pressed from main menu.
@@ -136,8 +138,10 @@ public class RestaurantTextUI {
 
 		// TODO: add server and display current count of servers, e.g.:
 		// Current server count: 3
-		crash("add server and display server count");
-	}
+		restaurant.addServer(new Servers(++Servers.addServerIndex,true));
+        System.out.println("There are "+ restaurant.getServerCountOnDuty()
+        + " Servers on duty");
+    }
 	
 	// Called when D key is pressed from main menu.
 	// Sends one server home for the night (if possible).

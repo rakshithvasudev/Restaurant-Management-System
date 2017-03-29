@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Rakshith on 3/17/2017.
  */
-public class Party implements Cloneable, Comparable<Party>{
+public final class Party implements Cloneable, Comparable<Party>{
 
     private String name;
     private int size;

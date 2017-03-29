@@ -3,7 +3,7 @@ package com.restaurant.rakshith;
 /**
  * Created by Rakshith on 3/17/2017.
  */
-public class Table implements Cloneable, Comparable<Table> {
+public final class Table implements Cloneable, Comparable<Table> {
 
     private int id;
     private boolean occupiedStatus;
