@@ -126,11 +126,135 @@ public class PartyTest {
         Assert.assertEquals("Size Corner Test Failed!",sPartyCorner.getSize(),5);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void getSizeCornerTest2(){
+        //Given (Arrange)
+        Party sPartyCorner = new Party("aParty",-1);
+
+        //When(Action)
+        sPartyCorner.setSize(5);
+
+        //Assert
+        Assert.assertEquals("Size Corner Test Failed!",sPartyCorner.getSize(),5);
+    }
+
+    @Test
+    public void setSizeTest(){
+        //Given (Arrange)
+        Party Ray = new Party("Ray's Party",2);
+
+        //When(Action)
+        Ray.setSize(5);
+
+        //Assert
+        Assert.assertEquals("Size Test Failed!",Ray.getSize(),5);
+    }
 
 
+    @Test
+    public void getBeingServedTest(){
+        //Given (Arrange)
+        Party Ray = new Party("Ray's Party",3);
+
+        //When(Action)
+        Ray.setBeingServed(true);
+
+        //Assert
+        Assert.assertEquals("Current Serve Test Failed!",Ray.getBeingServed(),true);
+    }
 
 
+    @Test
+    public void setBeingServedTest(){
+        //Given (Arrange)
+        Party joe = new Party("Joe's Party",3);
 
+        //When(Action)
+        joe.setBeingServed(false);
+
+        //Assert
+        Assert.assertEquals("Current Serve Test Failed!",joe.getBeingServed(),false);
+    }
+
+    @Test
+    public void checkRepeatedNamesTest(){
+        //Given
+        Party joe = new Party("Joe's Party",3);
+        Party joe2 = new Party("Joe's Party",3);
+        Party miller = new Party("Miller's Party",3);
+
+        Table table = new Table(1,4);
+        Table table1 = new Table(2,4);
+        Table table2 = new Table(3,5);
+        List<Party> partyWaitList = new ArrayList<>();
+        List<Table> tablesServed = new ArrayList<>();
+
+        //When (Action)
+        partyWaitList.add(joe2);
+        tablesServed.add(table);
+        tablesServed.add(table1);
+        tablesServed.add(table2);
+
+        table.setParty(joe);
+        table1.setParty(miller);
+
+        //Assert
+        Assert.assertTrue("Repeated name test failed",
+                Party.checkRepeatedNames(tablesServed,partyWaitList,joe.getName()));
+
+    }
+
+    @Test
+    public void equalsTest(){
+        Party joe = new Party("Joe's Party",3);
+        Party ryan = new Party("Ryan's Party",3);
+
+        //When (Action)
+        joe.setBeingServed(true);
+        ryan.setBeingServed(true);
+
+        //Assert
+        Assert.assertTrue("Equals test Failed" , joe.equals(ryan));
+    }
+
+    @Test
+    public void cloneTest(){
+        Party joe = new Party("Joe's Party",3);
+        Party clonedJoe;
+
+        //When (Action)
+        clonedJoe=joe.clone();
+
+        //Assert
+        Assert.assertTrue("Clone test Failed" , joe.equals(clonedJoe));
+    }
+
+
+    @Test
+    public void cloneTest2(){
+        Party joe = new Party("Joe's Party",3);
+        Party clonedJoe;
+
+        //When (Action)
+        clonedJoe=joe.clone();
+
+        //Assert
+        Assert.assertFalse("Clone test Failed" , joe==(clonedJoe));
+    }
+
+
+    @Test
+    public void toStringTest(){
+        Party joe = new Party("Joe's Party",3);
+
+        //When (Action)
+        String originalToString  = joe.toString();
+        String expectedToString  = "Party Name: " +joe.getName() + " whose size is: "+ joe.getSize()+
+        (joe.getBeingServed()? " who is being served.":" who is not served.");
+
+        //Assert
+        Assert.assertTrue("toString test Failed" , originalToString.equals(expectedToString));
+    }
 
 
 

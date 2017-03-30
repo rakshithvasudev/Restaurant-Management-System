@@ -253,7 +253,7 @@ public class RestaurantTextUI {
         //there are no more elements in the waitList.
 
         Iterator<Map.Entry<String, Party>> iterator =  restaurant.getWaitList().entrySet().iterator();
-        Map.Entry<String, Party> waitListElement = restaurant.getWaitList().entrySet().iterator().next();
+        Map.Entry<String, Party> waitListElement = iterator.next();
         int counter=0;
         while(true){
             if(counter!=0)

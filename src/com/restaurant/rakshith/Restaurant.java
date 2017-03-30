@@ -78,23 +78,25 @@ public final class Restaurant {
 
 
     private void setServerForParty(Table currentTable, Party party) {
+        int counterIndex=0;
         Map<Integer,Table> tableMap = new LinkedHashMap<>();
         if(servers.size()>0)
             //values() are retrieved in the order inserted.
             for (Servers currentServer : servers.values())
-                if (currentServer.getOnDuty()){
+                if (currentServer.getOnDuty()) {
                     tableMap.put(currentTable.getId(),
                             currentTable);
-                    if(currentServer.getTablesServed().size()>0 &&
-                            servers.size() % currentServer.getTablesServed().size()==0)
+                    if (currentServer.getTablesServed().size() > 0 &&
+                            servers.size() % currentServer.getTablesServed().size() == 0)
                         continue;
-                    currentServer.setTablesServed(tableMap);
-                    currentTable.setServer(currentServer);
-                    party.setBeingServed(true);
-                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
-                    System.out.println("Party seated at " + currentTable);
-                    break;
-        }
+                        currentServer.setTablesServed(tableMap);
+                        currentTable.setServer(currentServer);
+                        party.setBeingServed(true);
+                        //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
+                        System.out.println("Party seated at " + currentTable);
+                        break;
+
+                }
 
     }
 
