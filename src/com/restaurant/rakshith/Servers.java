@@ -130,6 +130,11 @@ public final class Servers implements Cloneable, Comparable<Servers>{
         return a;
     }
 
+    /**
+     * Compares for state matching of duty status, tips and tables Served.
+     * @param obj other object that has to be compared.
+     * @return true if the other object serves the same tables as this server.
+     */
     @Override
     public boolean equals(Object obj) {
         if(obj!=null&& getClass()==obj.getClass()){
