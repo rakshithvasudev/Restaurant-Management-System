@@ -200,10 +200,65 @@ public class TableTest {
         //When (More Action)
         table.readjustTable();
 
-
         // Then (Assertion)
         Assert.assertFalse("Not matching capacity",table.getServer()!=null
         && table.getParty()!=null && !table.getOccupiedStatus());
     }
+
+    @Test
+    public void equalsTest(){
+
+        //Given (Arrange)
+        Table table = new Table(1,6);
+        Servers servers1 = new Servers(1,true);
+        Party party = new Party("Mac Joe Harry",6);
+        Table clonedTable;
+
+        //When(Action)
+        table.setServer(servers1);
+        table.setParty(party);
+        table.setOccupiedStatus(true);
+        clonedTable = table.clone();
+
+        // Then (Assertion)
+        Assert.assertTrue("Not matching states",table.equals(clonedTable));
+
+    }
+
+    @Test
+    public void cloneTest(){
+
+        //Given (Arrange)
+        Table table1 = new Table(2,6);
+        Servers servers2 = new Servers(1,true);
+        Party party = new Party("Mac",4);
+        Table clonedTable;
+
+        //When(Action)
+        table1.setServer(servers2);
+        table1.setParty(party);
+        table1.setOccupiedStatus(true);
+        clonedTable = table1.clone();
+
+        // Then (Assertion)
+        Assert.assertTrue("Cloned Not matching states",table1.equals(clonedTable));
+
+    }
+
+
+    @Test
+    public void compareToTest(){
+        // Given (Arrange)
+        Table table1 = new Table(2,9);
+        Table table2 = new Table(2,6);
+
+        // When (Nothing)
+
+        // Then (Assertion)
+        Assert.assertTrue("Not matching states",table1.compareTo(table2)==3);
+
+    }
+
+
 
 }

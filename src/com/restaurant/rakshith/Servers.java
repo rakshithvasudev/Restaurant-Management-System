@@ -107,7 +107,7 @@ public final class Servers implements Cloneable, Comparable<Servers>{
              Servers objEqual = (Servers)obj;
            return onDuty==objEqual.onDuty &&
                    tips==objEqual.tips &&
-                   tablesServed==objEqual.tablesServed;
+                   tablesServed.equals(objEqual.tablesServed);
         }
         return false;
     }
