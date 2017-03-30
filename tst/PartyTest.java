@@ -45,8 +45,10 @@ public class PartyTest {
         tables.add(table1);
 
         // Then (Assertion)
-        Assert.assertEquals("Sorry, Test failed",aParty.checkRepeatedNames(tables,parties,"aParty"),true);
-        Assert.assertEquals("Sorry test failed", bParty.checkRepeatedNames(tables,parties,"bParty"),true);
+        Assert.assertEquals("Sorry, Test failed",
+                aParty.checkRepeatedNames(tables,parties,"aParty"),true);
+        Assert.assertEquals("Sorry test failed",
+                bParty.checkRepeatedNames(tables,parties,"bParty"),true);
     }
 
 

@@ -7,6 +7,10 @@ import java.util.Map;
 
 /**
  * Created by Rakshith on 3/17/2017.
+ * This class is responsible for the servers object in the restaurant. This class supports
+ * Cloning, Comparing. The static field addServerIndex must be initialized as soon as declared.
+ * This field is imperative to create a new Servers object.
+ * cloning performs a deep copy of the Servers object.
  */
 public final class Servers implements Cloneable, Comparable<Servers>{
 
@@ -16,36 +20,35 @@ public final class Servers implements Cloneable, Comparable<Servers>{
     private double tips;
     public static int addServerIndex=0;
 
-
+    /**
+     * This Constructor creates a new Servers object and initializes the other fields.
+     * @param id sets the id of the Servers object. Needs to be larger than 0.
+     * @param onDuty sets the server on duty or not on duty based on true or false
+     *               respectively.
+     * @throws IllegalArgumentException if the id is not larger than 0.
+     */
     public Servers(int id, boolean onDuty) {
+        if(id>0)
+            this.id = id;
+         else
+             throw new IllegalArgumentException("Enter correct Id");
+
         tablesServed=new LinkedHashMap<>();
-        this.id = id;
         this.onDuty = onDuty;
-        tips=0.0;
+        tips= 0.0;
     }
 
-
+    /**
+     * Returns a LinkedHashMap of \<Integer, Table\> tables served.
+     * @return the tables served by the current servers object.
+     */
     public Map<Integer, Table> getTablesServed() {
         return tablesServed;
     }
 
 
     public void setTablesServed(Map<Integer,Table> tablesServed ) {
-//        Iterator iteratorParam = tablesServed.entrySet().iterator();
-//        Map.Entry<Integer,Table> integerTableEntry;
-//       while (iteratorParam.hasNext()){
-//            integerTableEntry = (Map.Entry<Integer, Table>)iteratorParam.next();
-//           this.tablesServed.put(integerTableEntry.getKey(),integerTableEntry.getValue());
-//       }
-
-        if(this.tablesServed.size()==0)
             this.tablesServed = new LinkedHashMap<>(tablesServed);
-
-        else if(this.tablesServed.size()>0)
-            for (int i=0;i<tablesServed.size();i++)
-            this.tablesServed.put(tablesServed.keySet().iterator().next(),tablesServed.values().iterator().next());
-
-
     }
 
 
@@ -53,6 +56,11 @@ public final class Servers implements Cloneable, Comparable<Servers>{
         return id;
     }
 
+    /**
+     * Required just to test. Once id set wouldn't be
+     * altered.
+     * @param id sets the id.
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -61,26 +69,47 @@ public final class Servers implements Cloneable, Comparable<Servers>{
         return onDuty;
     }
 
+    /**
+     * Required just to test. Once duty set wouldn't be
+     * altered.
+     * @param onDuty sets the Duty status.
+     */
     public void setOnDuty(boolean onDuty) {
         this.onDuty = onDuty;
     }
 
+    /**
+     * Adds a new table to the server's serving list.
+     * @param table new table that has to be added.
+     */
     public void serveAnotherTable(Table table){
         tablesServed.put(table.getId(),table);
     }
 
+    /**
+     * Removes a table from the list of tables served.
+     * @param table required table that needs to be removed.
+     */
     public void removeTable(Table table) {
         tablesServed.remove(table.getId());
     }
 
     public double getTips() {
-        return tips;
+        return this.tips;
     }
 
-    public void setTips(double tips) {
-        this.tips+= tips;
+    /**
+     * Adds tip to the server.
+     * @param tipsValue double value that has to be added.
+     */
+    public void setTips(double tipsValue) {
+        this.tips= this.tips+tipsValue;
     }
 
+    /**
+     * Performs a deep copy of the given Servers object.
+     * @return cloned Servers object.
+     */
     @Override
     public Servers clone(){
         try {
@@ -124,6 +153,12 @@ public final class Servers implements Cloneable, Comparable<Servers>{
                         (builder.length()==0?"None": builder);
     }
 
+    /**
+     * returns an integer comparing the 2 servers.
+     * @param o other server.
+     * @return >0 if this server id>other server, ==0
+     * if they servers are equal & <0 otherwise.
+     */
     public int compareTo(Servers o){
         return id-o.id;
     }
