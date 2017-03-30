@@ -1,6 +1,7 @@
 package com.restaurant.rakshith;
 
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -30,7 +31,21 @@ public final class Servers implements Cloneable, Comparable<Servers>{
 
 
     public void setTablesServed(Map<Integer,Table> tablesServed ) {
-        this.tablesServed=tablesServed;
+//        Iterator iteratorParam = tablesServed.entrySet().iterator();
+//        Map.Entry<Integer,Table> integerTableEntry;
+//       while (iteratorParam.hasNext()){
+//            integerTableEntry = (Map.Entry<Integer, Table>)iteratorParam.next();
+//           this.tablesServed.put(integerTableEntry.getKey(),integerTableEntry.getValue());
+//       }
+
+        if(this.tablesServed.size()==0)
+            this.tablesServed = new LinkedHashMap<>(tablesServed);
+
+        else if(this.tablesServed.size()>0)
+            for (int i=0;i<tablesServed.size();i++)
+            this.tablesServed.put(tablesServed.keySet().iterator().next(),tablesServed.values().iterator().next());
+
+
     }
 
 

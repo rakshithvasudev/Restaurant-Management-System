@@ -86,7 +86,8 @@ public final class Restaurant {
                 if (currentServer.getOnDuty()){
                     tableMap.put(currentTable.getId(),
                             currentTable);
-                    if(currentServer.getTablesServed().size()>0)
+                    if(currentServer.getTablesServed().size()>0 &&
+                            currentServer.getTablesServed().size()%servers.size()==0)
                         continue;
                     currentServer.setTablesServed(tableMap);
                     currentTable.setServer(currentServer);
@@ -215,7 +216,7 @@ public final class Restaurant {
      * @param tables
      */
     public void addToAllocations(Servers server, List<Table> tables) {
-         List<Table> tablesServed;
+        List<Table> tablesServed;
         if(allocations.size()>0)
             for(int currentServerId : servers.keySet()){
                 if(server.getId()== currentServerId) {
@@ -226,8 +227,6 @@ public final class Restaurant {
                     break;
                 }
             }
-
-
 
         if(allocations.size()==0)
             allocations.put(server,tables);

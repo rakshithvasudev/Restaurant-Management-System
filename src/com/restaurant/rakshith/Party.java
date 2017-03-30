@@ -45,15 +45,13 @@ public final class Party implements Cloneable, Comparable<Party>{
     public boolean checkRepeatedNames(List<Table> tablesServed, List<Party> waitList, String nameToCheck) {
         for (Table tableItem : tablesServed) {
             if (tableItem.getOccupiedStatus() &&
-                    tableItem.getParty().getName().equals(nameToCheck)) {
-                return true;
-            }
+                    tableItem.getParty().getName().equals(nameToCheck))
+                        return true;
         }
 
         for (Party partyItem : waitList) {
-            if (partyItem.getName().equals(nameToCheck)) {
+            if (partyItem.getName().equals(nameToCheck))
                 return true;
-            }
         }
 
         return false;

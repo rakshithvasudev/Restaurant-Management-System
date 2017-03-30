@@ -75,15 +75,21 @@ public class DeleteMain {
 
         Servers servers1 = new Servers(1,true);
         Servers servers2 = new Servers(2,true);
+        Servers servers3 = new Servers(3,true);
         restaurant.addServer(servers1);
         restaurant.addServer(servers2);
+        restaurant.addServer(servers3);
 //
 //        System.out.println(restaurant.getServers());
 
+
+
         restaurant.optimizedTableMapping(ronald);
         restaurant.optimizedTableMapping(joe);
-//        restaurant.optimizedTableMapping(ray);
-//        restaurant.optimizedTableMapping(donald);
+        restaurant.optimizedTableMapping(ray);
+        restaurant.optimizedTableMapping(donald);
+
+        System.out.println(servers1.getTablesServed());
 //        restaurant.optimizedTableMapping(big);
 //
 //
