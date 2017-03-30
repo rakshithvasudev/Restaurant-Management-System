@@ -3,6 +3,7 @@ package com.restaurant.rakshith;
 import java.util.List;
 
 /**
+ *
  * Created by Rakshith on 3/17/2017.
  * This class is responsible for a parties in the restaurant.
  * Supports cloning and comparing. This class cannot be extended.

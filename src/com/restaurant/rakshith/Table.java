@@ -1,7 +1,21 @@
 package com.restaurant.rakshith;
 
 /**
+ *                      TABLE CLASS.
+ *  ┬────────────────────────────────────────────────────┬
+ *
  * Created by Rakshith on 3/17/2017.
+ * This class is responsible for tables in the restaurant. Supports
+ * cloning and comparing. This class cannot be extended. The static index
+ * field is important to keep a track of the available insertion of tables.
+ * It is important to initialize it at the beginning of the field declaration
+ * and not in the constructor. The Servers object describes the particular server
+ * who serves this table. Table size must be valid in terms of the values
+ * passed. The party object here describes the party seated at this particular
+ * table. Initially, when there is no party, it is set to null. The other fields
+ * except servers are primitive and therefore this entire class
+ * cloned would perform a deep copy.
+ *
  */
 public final class Table implements Cloneable, Comparable<Table> {
 
@@ -108,6 +122,10 @@ public final class Table implements Cloneable, Comparable<Table> {
         return false;
     }
 
+    /**
+     * Performs a deep copy of the table object
+     * @return
+     */
     @Override
     public Table clone(){
         try {
