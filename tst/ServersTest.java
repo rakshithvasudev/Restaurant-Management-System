@@ -41,7 +41,7 @@ public class ServersTest {
         table.setServer(servers);
 
         // Then (Assertion)
-        Assert.assertTrue("Constructor Failed", table.getServer().getId()==1);
+        Assert.assertTrue("Constructor Failed", table.getServer().getId()==2);
     }
 
     @Test
@@ -162,6 +162,58 @@ public class ServersTest {
 
         // Then (Assertion)
         Assert.assertTrue("setting tips failed", servers.getTips()==10.3);
+    }
+
+
+    @Test
+    public void cloneTest(){
+        //Given (Arrange)
+        Servers servers = new Servers(1,true);
+        Servers cloned;
+        //When(Action)
+        cloned = servers.clone();
+
+        // Then (Assertion)
+        Assert.assertTrue("setting tips failed", servers.equals(cloned));
+    }
+
+
+    @Test
+    public void cloneTest2(){
+        //Given (Arrange)
+        Servers servers = new Servers(1,true);
+        Servers cloned;
+        //When(Action)
+        cloned = servers.clone();
+
+        // Then (Assertion)
+        Assert.assertFalse("setting tips failed", servers==(cloned));
+    }
+
+    @Test
+    public void  equalsTest(){
+        //Given (Arrange)
+        Servers servers = new Servers(1,true);
+        Servers cloned;
+        //When(Action)
+        cloned = servers.clone();
+
+        // Then (Assertion)
+        Assert.assertTrue("setting tips failed", servers.equals(cloned));
+    }
+
+
+    @Test
+    public void  compareToTest(){
+        //Given (Arrange)
+        Servers servers = new Servers(1,true);
+        Servers servers1 = new Servers(2,true);
+
+        //When(Action)
+        //nothing
+
+        // Then (Assertion)
+        Assert.assertTrue("setting tips failed", servers.compareTo(servers1)<0);
     }
 
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/ServersTest.java" afterPath="$PROJECT_DIR$/tst/ServersTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,10 +18,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Servers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Servers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1603">
+            <state relative-caret-position="1391">
               <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
               <folding>
                 <element signature="e#2388#2389#0" expanded="true" />
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServersTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServersTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tst/ServersTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1073">
-              <caret line="163" column="72" lean-forward="false" selection-start-line="163" selection-start-column="72" selection-end-line="163" selection-end-column="72" />
+              <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/tst/TableTest.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
         <option value="$PROJECT_DIR$/tst/PartyTest.java" />
-        <option value="$PROJECT_DIR$/tst/ServersTest.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" />
+        <option value="$PROJECT_DIR$/tst/ServersTest.java" />
       </list>
     </option>
   </component>
@@ -191,15 +191,15 @@
       <recent name="C:\Users\Rakshith\Desktop\CBU hws\CSC526\HW5\Solution" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServersTest.setTipsTest">
-    <configuration default="false" name="ServersTest.setTablesServedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ServersTest">
+    <configuration default="false" name="ServersTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="setTablesServedTest" />
+      <option name="METHOD_NAME" value="cloneTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -213,14 +213,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.setIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ServersTest.cloneTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="setIdTest" />
+      <option name="METHOD_NAME" value="cloneTest2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -234,14 +234,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.setonDutyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ServersTest.equalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="setonDutyTest" />
+      <option name="METHOD_NAME" value="equalsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -255,14 +255,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.removeTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ServersTest.compareToTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="removeTableTest" />
+      <option name="METHOD_NAME" value="compareToTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -276,15 +276,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.setTipsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ServersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="setTipsTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -718,19 +718,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest.setTablesServedTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.setIdTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.setonDutyTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.removeTableTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest.setTipsTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest2" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.equalsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.compareToTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest.setTipsTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.removeTableTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.setonDutyTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.setIdTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest.setTablesServedTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.compareToTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.equalsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest2" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -786,34 +786,34 @@
       <workItem from="1490837537539" duration="16560000" />
       <workItem from="1490890995691" duration="1124000" />
       <workItem from="1490893812747" duration="3061000" />
-      <workItem from="1490901800687" duration="9692000" />
+      <workItem from="1490901800687" duration="9983000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 56m 37s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest - 2017.03.30 at 15h 08m 27s.xml">
+      <configuration name="ServersTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 57m 38s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest - 2017.03.30 at 15h 12m 56s.xml">
+      <configuration name="ServersTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 58m 20s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_cloneTest - 2017.03.30 at 15h 10m 06s.xml">
+      <configuration name="ServersTest.cloneTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 58m 38s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_cloneTest2 - 2017.03.30 at 15h 10m 28s.xml">
+      <configuration name="ServersTest.cloneTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 58m 46s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_compareToTest - 2017.03.30 at 15h 12m 33s.xml">
+      <configuration name="ServersTest.compareToTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 14h 59m 33s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_constructorTest2 - 2017.03.30 at 15h 09m 00s.xml">
+      <configuration name="ServersTest.constructorTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 15h 00m 26s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_constructorTest2 - 2017.03.30 at 15h 09m 03s.xml">
+      <configuration name="ServersTest.constructorTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 15h 01m 02s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
+    <history-entry file="ServersTest_equalsTest - 2017.03.30 at 15h 11m 19s.xml">
+      <configuration name="ServersTest.equalsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 15h 01m 42s.xml">
       <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
@@ -823,7 +823,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181889000" />
+    <option name="totallyTimeSpent" value="182180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3856" height="2098" extended-state="0" />
@@ -1334,19 +1334,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/ServersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="163" column="72" lean-forward="false" selection-start-line="163" selection-start-column="72" selection-end-line="163" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1603">
+        <state relative-caret-position="1391">
           <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding>
             <element signature="e#2388#2389#0" expanded="true" />
@@ -1355,6 +1345,16 @@
             <element signature="e#2730#2731#0" expanded="true" />
             <element signature="e#2881#2882#0" expanded="true" />
             <element signature="e#2927#2928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/ServersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
