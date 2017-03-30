@@ -56,27 +56,39 @@ public class DeleteMain {
         }
 
 
-        Servers someOne = new Servers(1,true);
-        Servers someTwo = new Servers(2,true);
-
-        restaurant.addServer(someOne);
-        restaurant.addServer(someTwo);
-
-        Map.Entry<Integer,Servers> idOfServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
+//        Servers someOne = new Servers(1,true);
+//        Servers someTwo = new Servers(2,true);
+//
+//        restaurant.addServer(someOne);
+//        restaurant.addServer(someTwo);
+//
+//        Map.Entry<Integer,Servers> idOfServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
        // restaurant.getServers().remove(idOfServerTobeDismissed.getKey());
 
-        System.out.println(idOfServerTobeDismissed);
+        //System.out.println(idOfServerTobeDismissed);
 
-        System.out.println(restaurant.getServers());
+       // System.out.println(restaurant.getServers());
 
 
 
 //
-//        restaurant.optimizedTableMapping(ronald);
-//        restaurant.optimizedTableMapping(joe);
+
+        Servers servers1 = new Servers(1,true);
+        Servers servers2 = new Servers(2,true);
+        restaurant.addServer(servers1);
+        restaurant.addServer(servers2);
+//
+//        System.out.println(restaurant.getServers());
+
+        restaurant.optimizedTableMapping(ronald);
+        restaurant.optimizedTableMapping(joe);
 //        restaurant.optimizedTableMapping(ray);
 //        restaurant.optimizedTableMapping(donald);
 //        restaurant.optimizedTableMapping(big);
+//
+//
+//
+//        System.out.println("Allocations"+ restaurant.getAllocations());
     }
 }
 

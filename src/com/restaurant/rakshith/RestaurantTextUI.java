@@ -5,7 +5,6 @@ package com.restaurant.rakshith;// Restaurant Homework
 import java.io.*;
 import java.util.*;
 
-
 /**
  * This class represents the text user interface (UI) for the restaurant
  * program, allowing the user to view and manage the restaurant and its objects.
@@ -140,7 +139,8 @@ public class RestaurantTextUI {
 
 		// TODO: add server and display current count of servers, e.g.:
 		// Current server count: 3
-		restaurant.addServer(new Servers(++Servers.addServerIndex,true));
+        Servers newServer= new Servers(++Servers.addServerIndex,true);
+		restaurant.addServer(newServer);
         System.out.println("There are "+ restaurant.getServerCountOnDuty()
         + " Servers on duty");
 
@@ -217,13 +217,11 @@ public class RestaurantTextUI {
 		double subtotal = ValidInputReader.getValidDouble("Bill subtotal?", 0.0, 9999.99);
 		double tip = ValidInputReader.getValidDouble("Tip?", 0.0, 9999.99);
 
-
-		Table selectedTable=null;
+        Table selectedTable=null;
 
 		for (Table currentTable: restaurant.getTables().values())
-		    if(currentTable.getParty().getName().equalsIgnoreCase(partyName)) {
+		    if(currentTable.getParty().getName().equalsIgnoreCase(partyName))
                 selectedTable = currentTable.clone();
-            }
             else{
                 // when such a party is NOT sitting at a table in the restaurant,
                 System.out.println("There is no party by that name.");
@@ -242,6 +240,7 @@ public class RestaurantTextUI {
 		// update restaurant's cash register, e.g.
         // Gave total of $39.75 to cash register.
         restaurant.addToCashRegister(0.1*subtotal+subtotal);
+        selectedTable.setOccupiedStatus(false);
 		System.out.println("Seating from waiting list:");
 		// when a party on the waiting list can now be seated, e.g.:
 		// Table 6 (6-top): Erickson party of 5 - Servers #2
@@ -261,16 +260,13 @@ public class RestaurantTextUI {
             while (iterator.hasNext())
              waitListElement = iterator.next();
             if (restaurant.optimizedTableMapping(waitListElement.getValue())) {
-                System.out.println("Party from waitingList was seated");
+                System.out.println("Party from waitingList was seated in the regular table.");
                 restaurant.removeFromWaitList(waitListElement.getValue());
                 break;
             }
             counter++;
         }
-
-
-
-	}
+    }
 	
 	// Called when W key is pressed from main menu.
 	// Displays the current waiting list, if any.

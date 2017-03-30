@@ -48,9 +48,7 @@ public final class Restaurant {
             Table currentTable = (Table) tableIterator.next();
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() == party.getSize()) {
-                currentTable.setParty(party);
-                currentTable.setOccupiedStatus(true);
-                //System.out.println("Party seated at " + currentTable);
+                manageTable(party,currentTable);
                 return true;
             }
             //Fix any indexOutOfBoundsExceptions that might occur.
@@ -63,15 +61,41 @@ public final class Restaurant {
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() > party.getSize())
                 if (nextTable.getCapacity() - currentTable.getCapacity() >= 0) {
-                    currentTable.setParty(party);
-                    currentTable.setOccupiedStatus(true);
-                    //System.out.println("Party seated at " + currentTable);
+                    manageTable(party,currentTable);
                     return true;
                 }
             currentIndex++;
         }
 
         return false;
+    }
+
+
+    private void manageTable(Party party, Table currentTable){
+        currentTable.setParty(party);
+        currentTable.setOccupiedStatus(true);
+        setServerForParty(currentTable,party);
+    }
+
+
+    private void setServerForParty(Table currentTable, Party party) {
+        Map<Integer,Table> tableMap = new LinkedHashMap<>();
+        if(servers.size()>0)
+            //values() are retrieved in the order inserted.
+            for (Servers currentServer : servers.values())
+                if (currentServer.getOnDuty()){
+                    tableMap.put(currentTable.getId(),
+                            currentTable);
+                    if(currentServer.getTablesServed().size()>0)
+                        continue;
+                    currentServer.setTablesServed(tableMap);
+                    currentTable.setServer(currentServer);
+                    party.setBeingServed(true);
+                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
+                    System.out.println("Party seated at " + currentTable);
+                    break;
+        }
+
     }
 
     public void addTable(Table table) {
@@ -184,7 +208,30 @@ public final class Restaurant {
         return servers;
     }
 
+    /**
+     * If there is already a record matching, just update the tables for
+     * that record.
+     * @param server object that matches the id of the server.
+     * @param tables
+     */
     public void addToAllocations(Servers server, List<Table> tables) {
-        allocations.put(server, tables);
+         List<Table> tablesServed;
+        if(allocations.size()>0)
+            for(int currentServerId : servers.keySet()){
+                if(server.getId()== currentServerId) {
+                    tablesServed = new ArrayList<>(allocations.get(server));
+                    for (Table currentTable: tables) {
+                        tablesServed.add(currentTable);
+                    }
+                    break;
+                }
+            }
+
+
+
+        if(allocations.size()==0)
+            allocations.put(server,tables);
+
     }
+
 }

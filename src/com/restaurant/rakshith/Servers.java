@@ -105,7 +105,7 @@ public final class Servers implements Cloneable, Comparable<Servers>{
                 }
 
                 return "Server id: "+id+" duty status:"
-                +(onDuty?" yes ":" no ") + "Serving Tables : " +
+                +(onDuty?" yes, ":" no, ") + "Serving Tables : " +
                         (builder.length()==0?"None": builder);
     }
 

@@ -13,21 +13,24 @@ public final class Table implements Cloneable, Comparable<Table> {
     private int capacity;
 
     public Table(int id, int capacity) {
-        if(id>0) {
+        if(id>0)
             this.id = id;
-        }else{
+        else
             throw new IllegalArgumentException
                     ("Enter Table id larger than or equal to 0");
-        }
 
-        if(capacity>0){
-        this.capacity = capacity;
-    }else {
+        if(capacity>0)
+        {
+            this.capacity = capacity;
+            occupiedStatus=false;
+            server=null;
+            party=null;
+        }
+    else
             throw new IllegalArgumentException
                     ("Enter table size larger than or equal to 0");
-        }
-    }
 
+    }
     public Party getParty(){
         return party;
     }
@@ -123,7 +126,7 @@ public final class Table implements Cloneable, Comparable<Table> {
                 (occupiedStatus?" occupied by("+ party.getName()+" , "+
                         party.getSize()+")":" Not Occupied ") +
                 " Capacity :"+capacity
-                +"Served by : "
+                +" Served by : "
                 +(server==null?"None":"Server #"+server.getId())
                 +"\n";
 }
@@ -132,4 +135,6 @@ public final class Table implements Cloneable, Comparable<Table> {
     public int compareTo(Table o) {
         return capacity-o.capacity;
     }
+
+
 }
