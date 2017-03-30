@@ -66,8 +66,7 @@ public final class Restaurant {
                 }
             currentIndex++;
         }
-
-        return false;
+         return false;
     }
 
 
@@ -87,7 +86,7 @@ public final class Restaurant {
                     tableMap.put(currentTable.getId(),
                             currentTable);
                     if(currentServer.getTablesServed().size()>0 &&
-                            currentServer.getTablesServed().size()%servers.size()==0)
+                            servers.size() % currentServer.getTablesServed().size()==0)
                         continue;
                     currentServer.setTablesServed(tableMap);
                     currentTable.setServer(currentServer);

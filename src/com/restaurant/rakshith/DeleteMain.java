@@ -14,8 +14,8 @@ public class DeleteMain {
         Party joe = new Party("Joe's Party",4);
         Party ronald = new Party("Ronald's Party",5);
         Party ray = new Party("Ray's Party",5);
-        Party donald = new Party("Donald",3);
-        Party big = new Party("Large party",52);
+        Party donald = new Party("Donald",2);
+        Party mellisa = new Party("Large party",2);
 //
 //        Table table1 = new Table(1,5);
 //        table1.setCapacity(6);
@@ -88,8 +88,9 @@ public class DeleteMain {
         restaurant.optimizedTableMapping(joe);
         restaurant.optimizedTableMapping(ray);
         restaurant.optimizedTableMapping(donald);
+        restaurant.optimizedTableMapping(mellisa);
 
-        System.out.println(servers1.getTablesServed());
+       // System.out.println(servers1.getTablesServed());
 //        restaurant.optimizedTableMapping(big);
 //
 //

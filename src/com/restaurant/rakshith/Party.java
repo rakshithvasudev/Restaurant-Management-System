@@ -53,7 +53,6 @@ public final class Party implements Cloneable, Comparable<Party>{
             if (partyItem.getName().equals(nameToCheck))
                 return true;
         }
-
         return false;
     }
 
