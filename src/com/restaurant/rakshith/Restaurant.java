@@ -12,7 +12,6 @@ import java.util.*;
  * linkedHashMap because they support the retrieval of elements in the inserted order
  * upon the usage of either keySet() values() and EntrySet() methods based on the
  * requirements respectively.
- *
  */
 public final class Restaurant {
     private Map<Integer, Table> tables;
@@ -99,23 +98,17 @@ public final class Restaurant {
      * @pre none of the arguments must be null.
      */
     private void setServerForParty(Table currentTable, Party party) {
-        int counterIndex = 1;
-//        List<Servers> serversList = new ArrayList<>(servers.values());
         if (servers.size() > 0)
             //values() are retrieved in the order inserted.
             for (Servers currentServer : servers.values())
                 if (currentServer.getOnDuty()) {
                     if (currentServer.getTablesServed().size() > 0 &&
-                            servers.size() % counterIndex == 0)
+                            servers.size() % currentServer.getTablesServed().size() == 0)
                         continue;
                     currentServer.serveAnotherTable(currentTable);
                     currentTable.setServer(currentServer);
                     party.setBeingServed(true);
-                    counterIndex++;
-                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
-//                    System.out.println("Party seated at " + currentTable);
                     break;
-
                 }
 
     }
