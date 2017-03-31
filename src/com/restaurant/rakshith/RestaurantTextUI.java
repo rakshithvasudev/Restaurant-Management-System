@@ -2,12 +2,15 @@ package com.restaurant.rakshith;// Restaurant Homework
 // Instructor-provided code.
 // You SHOULD heavily modify this file to make it interface with your own classes.
 
+//java util is imported to use collections here and not to use Scanner.
 import java.io.*;
 import java.util.*;
 
 /**
  * This class represents the text user interface (UI) for the restaurant
  * program, allowing the user to view and manage the restaurant and its objects.
+ * Scanner is used from com.restaurant.rakshith package and not from
+ * java.util.* library.
  * @author Rakshith
  * @version 1.0.0
  */
@@ -225,7 +228,6 @@ public class RestaurantTextUI {
             else{
                 // when such a party is NOT sitting at a table in the restaurant,
                 System.out.println("There is no party by that name.");
-                crash("check, please");
             }
 
         // TODO: give tip to server, e.g.:
@@ -276,40 +278,54 @@ public class RestaurantTextUI {
 		// TODO: show restaurant's waiting list, e.g.:
 		// Johnson party of 7
 		// Erickson party of 6
-		
-		// when there is nobody on the waiting list,
-		System.out.println("empty");
-		crash("waiting list");
+
+        if(restaurant.getWaitList().size()>0)
+            for (Party currentWaitParty: restaurant.getWaitList().values())
+                System.out.println(currentWaitParty);
+
+        // when there is nobody on the waiting list,
+        if(restaurant.getWaitList().size()==0)
+            System.out.println("empty");
+
 	}
 	
 	// Called when P key is pressed from main menu.
 	// Helps seat a newly arriving party at a table in the restaurant.
 	private void partyToBeSeated() {
 		// when there are no servers,
-		System.out.println("Sorry, there are no servers here yet to seat this party");
-		System.out.println("and take their orders.  Add servers and try again.");
-		
-		crash("party to be seated");
-
+        if(restaurant.getServers().size()==0) {
+            System.out.println("Sorry, there are no servers here yet to seat this party");
+            System.out.println("and take their orders.  Add servers and try again.");
+        }
 		// when there is at least one server,
 		String partyName = ValidInputReader.getValidString("Party's name?", "^[a-zA-Z '-]+$");
 		int partySize = ValidInputReader.getValidInt("How many people in the party?", 1, 99999);
 		
 		// when a duplicate party name is found,
-		System.out.println("We already have a party with that name in the restaurant.");
-		System.out.println("Please try again with a unique party name.");
 
+        List<Table> ServedTables = new ArrayList<>(restaurant.getTables().values());
+        List<Party> partiesServed = new ArrayList<>(restaurant.getWaitList().values());
+
+        if(Party.checkRepeatedNames(ServedTables,partiesServed,partyName)) {
+            System.out.println("We already have a party with that name in the restaurant.");
+            System.out.println("Please try again with a unique party name.");
+        }
 		// TODO: try to seat this party
-		
-		// when the restaurant doesn't have any tables big enough to ever seat this party,
-		System.out.println("Sorry, the restaurant is unable to seat a party of this size.");
-		
-		// when all tables large enough to accommodate this party are taken,
-		System.out.println("Sorry, there is no open table that can seat this party now.");
-		boolean wait = ValidInputReader.getYesNo("Place this party onto the waiting list? (y/n)");
+         Party currentParty = new Party(partyName,partySize);
 
-		// TODO: put this party on the waiting list
-		crash("waiting list");
+		if(!restaurant.optimizedTableMapping(currentParty))
+            // when all tables large enough to accommodate this party are taken,
+            System.out.println("Sorry, there is no open table that can seat this party now.");
+
+        if(restaurant.getBiggestTableSize()<partySize)
+        // when the restaurant doesn't have any tables big enough to ever seat this party
+          System.out.println("Sorry, the restaurant is unable to seat a party of this size.");
+
+        boolean wait = ValidInputReader.getYesNo("Place this party onto the waiting list? (y/n)");
+        // TODO: put this party on the waiting list
+		if(wait)
+		    restaurant.addToWaitList(currentParty);
+
 	}
 	
 	

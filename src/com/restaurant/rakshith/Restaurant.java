@@ -76,7 +76,12 @@ public final class Restaurant {
         setServerForParty(currentTable, party);
     }
 
-
+    /**
+     * Sets a server for the required Party at the Required Table.
+     * @pre none of the arguments must be null.
+     * @param currentTable the table that has the party.
+     * @param party the actual party.
+     */
     private void setServerForParty(Table currentTable, Party party) {
         int counterIndex = 0;
         if (servers.size() > 0)
@@ -89,7 +94,7 @@ public final class Restaurant {
                     currentServer.serveAnotherTable(currentTable);
                     currentTable.setServer(currentServer);
                     party.setBeingServed(true);
-                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
+                    addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
                     System.out.println("Party seated at " + currentTable);
                     break;
 
@@ -230,7 +235,7 @@ public final class Restaurant {
      * that record.
      *
      * @param server object that matches the id of the server.
-     * @param tables the list of tables that must be added.
+     * @param tables the list of tables that must be for that server added.
      */
     public void addToAllocations(Servers server, List<Table> tables) {
         List<Table> tablesServed;

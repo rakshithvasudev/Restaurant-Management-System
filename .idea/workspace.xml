@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/RestaurantTest.java" afterPath="$PROJECT_DIR$/tst/RestaurantTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,22 +19,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="171" column="24" lean-forward="false" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+            <state relative-caret-position="1219">
+              <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RestaurantTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
+            <state relative-caret-position="-3286">
               <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurantTextUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6161">
+              <caret line="358" column="9" lean-forward="true" selection-start-line="358" selection-start-column="9" selection-end-line="358" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +64,8 @@
       <file leaf-file-name="Party.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Party.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5209">
-              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="569">
+              <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -97,15 +109,15 @@
         <option value="$PROJECT_DIR$/src/com/restuarant/rakshith/RestaurantTextUI.java" />
         <option value="$PROJECT_DIR$/tables.txt" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" />
-        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Party.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Table.java" />
         <option value="$PROJECT_DIR$/tst/TableTest.java" />
         <option value="$PROJECT_DIR$/tst/PartyTest.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" />
         <option value="$PROJECT_DIR$/tst/ServersTest.java" />
-        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
         <option value="$PROJECT_DIR$/tst/RestaurantTest.java" />
+        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
+        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
       </list>
     </option>
   </component>
@@ -203,7 +215,7 @@
       <recent name="C:\Users\Rakshith\Desktop\CBU hws\CSC526\HW5\Solution" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PartyTest">
+  <component name="RunManager" selected="Application.RestaurantMain">
     <configuration default="false" name="RestaurantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
@@ -233,27 +245,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
       <option name="METHOD_NAME" value="getBiggestTableUsableTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RestaurantTest.getEmptyTablesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Restaurant" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
-      <option name="METHOD_NAME" value="getEmptyTablesTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -307,6 +298,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RestaurantMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.restaurant.rakshith.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.restaurant.rakshith.RestaurantMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Restaurant" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -732,17 +743,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getEmptyTablesTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PartyTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PartyTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RestaurantMain" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PartyTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getEmptyTablesTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.RestaurantMain" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PartyTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -799,7 +810,7 @@
       <workItem from="1490890995691" duration="1124000" />
       <workItem from="1490893812747" duration="3061000" />
       <workItem from="1490901800687" duration="10510000" />
-      <workItem from="1490919109604" duration="4520000" />
+      <workItem from="1490919109604" duration="6257000" />
     </task>
     <servers />
   </component>
@@ -836,7 +847,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187227000" />
+    <option name="totallyTimeSpent" value="188964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
@@ -975,9 +986,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6890">
           <caret line="130" column="23" lean-forward="false" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,9 +1058,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6890">
           <caret line="130" column="23" lean-forward="false" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,9 +1170,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,9 +1242,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,22 +1301,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="264" column="22" lean-forward="true" selection-start-line="264" selection-start-column="22" selection-end-line="264" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tst/TableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
           <caret line="22" column="98" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="22" selection-end-column="98" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1338,7 +1331,7 @@
         <state relative-caret-position="450">
           <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1364,24 +1357,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Party.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5209">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="171" column="24" lean-forward="false" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+        <state relative-caret-position="569">
+          <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
+        <state relative-caret-position="-3286">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6161">
+          <caret line="358" column="9" lean-forward="true" selection-start-line="358" selection-start-column="9" selection-end-line="358" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
           <folding />
         </state>
       </provider>
