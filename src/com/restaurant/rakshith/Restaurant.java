@@ -29,9 +29,9 @@ public final class Restaurant {
 
     /**
      * Places the party in the right table.
-     * Prints where the Party was seated.
-     * If that was not made possible, then a
-     * not possible message is printed.
+     * As long as there is availability of tables that
+     * are unoccupied. This would mean that
+     *
      *
      * @param party the party supposed to be seated.
      * @pre : The party is not null and has a practically finite number of
@@ -48,7 +48,7 @@ public final class Restaurant {
             Table currentTable = (Table) tableIterator.next();
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() == party.getSize()) {
-                manageTable(party,currentTable);
+                manageTable(party, currentTable);
                 return true;
             }
             //Fix any indexOutOfBoundsExceptions that might occur.
@@ -61,42 +61,49 @@ public final class Restaurant {
             if (!currentTable.getOccupiedStatus() &&
                     currentTable.getCapacity() > party.getSize())
                 if (nextTable.getCapacity() - currentTable.getCapacity() >= 0) {
-                    manageTable(party,currentTable);
+                    manageTable(party, currentTable);
                     return true;
                 }
             currentIndex++;
         }
-         return false;
+        return false;
     }
 
 
-    private void manageTable(Party party, Table currentTable){
+    private void manageTable(Party party, Table currentTable) {
         currentTable.setParty(party);
         currentTable.setOccupiedStatus(true);
-        setServerForParty(currentTable,party);
+        setServerForParty(currentTable, party);
     }
 
 
     private void setServerForParty(Table currentTable, Party party) {
-        int counterIndex=0;
-        if(servers.size()>0)
+        int counterIndex = 0;
+        if (servers.size() > 0)
             //values() are retrieved in the order inserted.
             for (Servers currentServer : servers.values())
                 if (currentServer.getOnDuty()) {
                     if (currentServer.getTablesServed().size() > 0 &&
                             servers.size() % currentServer.getTablesServed().size() == 0)
                         continue;
-                        currentServer.serveAnotherTable(currentTable);
-                        currentTable.setServer(currentServer);
-                        party.setBeingServed(true);
-                        //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
-                        System.out.println("Party seated at " + currentTable);
-                        break;
+                    currentServer.serveAnotherTable(currentTable);
+                    currentTable.setServer(currentServer);
+                    party.setBeingServed(true);
+                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
+                    System.out.println("Party seated at " + currentTable);
+                    break;
 
                 }
 
     }
 
+    /**
+     * Adds a Table to the restaurant. Puts in the
+     * tables hashMap of the restaurant.
+     *
+     * @param table table that has to be added.
+     * @pre table is not null.
+     */
     public void addTable(Table table) {
         tables.put(table.getId(), table);
     }
@@ -114,24 +121,41 @@ public final class Restaurant {
         return onDutyCount;
     }
 
+    /**
+     * Adds a server to the restaurant.
+     * @pre Server can't be null.
+     * @param server the server to be added.
+     */
     public void addServer(Servers server) {
         servers.put(server.getId(), server);
     }
 
+    /**
+     * Adds a party to a waitList.
+     * @param party the party to be added to the list.
+     */
     public void addToWaitList(Party party) {
         waitList.put(party.getName(), party);
     }
 
+    /**
+     * Removes a party from the waitList
+     * @param party the party to be removed.
+     */
     public void removeFromWaitList(Party party) {
         waitList.remove(party.getName());
     }
 
+    /**
+     * Removes a table from the restaurant.
+     * @param table table that has to be removed.
+     */
     public void removeTable(Table table) {
         tables.remove(table.getId());
     }
 
     /**
-     * Gets the largest table in the Restaurant.
+     * Gets the largestSize of the table in the Restaurant.
      *
      * @return largestSize in the available Map of Tables.
      * @Pre: The tables field is not null.
@@ -163,12 +187,6 @@ public final class Restaurant {
         cashRegister += value;
     }
 
-    public boolean canServerWork(Servers server) {
-        //if a there are x servers working, this server can work only
-        // if this server serves 1 less than the number of available servers. i.e <x-1
-        return server.getTablesServed().size() < servers.size() - 1;
-        //return server.getOnDuty();
-    }
 
     /**
      * Gets the number of emptyTables that are not being used by the Restaurant.
@@ -210,24 +228,25 @@ public final class Restaurant {
     /**
      * If there is already a record matching, just update the tables for
      * that record.
+     *
      * @param server object that matches the id of the server.
-     * @param tables
+     * @param tables the list of tables that must be added.
      */
     public void addToAllocations(Servers server, List<Table> tables) {
         List<Table> tablesServed;
-        if(allocations.size()>0)
-            for(int currentServerId : servers.keySet()){
-                if(server.getId()== currentServerId) {
+        if (allocations.size() > 0)
+            for (int currentServerId : servers.keySet()) {
+                if (server.getId() == currentServerId) {
                     tablesServed = new ArrayList<>(allocations.get(server));
-                    for (Table currentTable: tables) {
+                    for (Table currentTable : tables) {
                         tablesServed.add(currentTable);
                     }
                     break;
                 }
             }
 
-        if(allocations.size()==0)
-            allocations.put(server,tables);
+        if (allocations.size() == 0)
+            allocations.put(server, tables);
 
     }
 

@@ -19,7 +19,7 @@ public class RestaurantTest
         restaurant.addTable(new Table(1,6));
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getTables().size()==1);
+        Assert.assertTrue("constructorTest failed", restaurant.getTables().size()==1);
 
     }
 
@@ -32,7 +32,7 @@ public class RestaurantTest
         restaurant.addTable(new Table(1,6));
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getTables().size()==1);
+        Assert.assertTrue("constructorTest2 failed", restaurant.getTables().size()==1);
 
     }
 
@@ -45,7 +45,7 @@ public class RestaurantTest
         restaurant.addTable(new Table(1,8));
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getTables().size()==1);
+        Assert.assertTrue("addTableTest failed", restaurant.getTables().size()==1);
 
     }
 
@@ -59,7 +59,7 @@ public class RestaurantTest
         restaurant.setName("new name");
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getName().equals("new name"));
+        Assert.assertTrue("setNameTest failed", restaurant.getName().equals("new name"));
     }
 
     @Test
@@ -72,7 +72,7 @@ public class RestaurantTest
         restaurant.addServer(servers);
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getServerCountOnDuty()==(1));
+        Assert.assertTrue("getServerOnDutyTest failed", restaurant.getServerCountOnDuty()==(1));
     }
 
     @Test
@@ -87,7 +87,7 @@ public class RestaurantTest
         restaurant.addServer(servers1);
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getServerCountOnDuty()==(2));
+        Assert.assertTrue("addServerTest failed", restaurant.getServerCountOnDuty()==(2));
     }
 
 
@@ -102,7 +102,7 @@ public class RestaurantTest
         restaurant.addToWaitList(party1);
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getWaitList().size()==2);
+        Assert.assertTrue("addToWaitListTest failed", restaurant.getWaitList().size()==2);
     }
 
 
@@ -118,28 +118,77 @@ public class RestaurantTest
         restaurant.addToWaitList(party1);
 
         // Then (Assertion)
-        Assert.assertTrue("setting tips failed", restaurant.getWaitList().size()==1);
+        Assert.assertTrue("removeFromWaitListTest failed", restaurant.getWaitList().size()==1);
     }
-
 
     @Test
-    public void optimizedTableMappingTest(){
-        Party joe = new Party("Joe's Party",5);
-        Party ronald = new Party("Ronald's Party",4);
+    public void removeTableTest(){
+        Restaurant restaurant = new Restaurant("El-Monte");
+        Table table = new Table(1,5);
+        Table table1 = new Table(2,6);
 
-        Table table1 = new Table(1,5);
-        table1.setCapacity(6);
-        Table table2 = new Table(2,5);
-        table2.setCapacity(4);
+        //When(Action)
+        restaurant.addTable(table);
+        restaurant.addTable(table1);
+        restaurant.removeTable(table);
 
-
-        Restaurant mcd = new Restaurant("Mcd");
-        mcd.optimizedTableMapping(joe);
-        mcd.optimizedTableMapping(ronald);
-
-
-        Assert.assertEquals("Couldn't map",table1.getParty().getName(),joe.getName());
+        // Then (Assertion)
+        Assert.assertTrue("removeTableTest failed", restaurant.getTables().size()==1);
     }
+
+    @Test
+    public void getBiggestTableSizeTest(){
+        Restaurant restaurant = new Restaurant("El-Monte");
+        Table table = new Table(1,5);
+        Table table1 = new Table(2,6);
+
+        //When(Action)
+        restaurant.addTable(table);
+        restaurant.addTable(table1);
+
+
+        // Then (Assertion)
+        Assert.assertEquals("removeTableTest failed",6, restaurant.getBiggestTableSize());
+    }
+
+    @Test
+    public void getBiggestTableUsableTest(){
+        Restaurant restaurant = new Restaurant("El-Monte");
+        Table table = new Table(1,5);
+        Table table1 = new Table(2,6);
+
+        //When(Action)
+        restaurant.addTable(table);
+        restaurant.addTable(table1);
+        restaurant.getBiggestTableUsable();
+
+        // Then (Assertion)
+        Assert.assertEquals("removeTableTest failed",6, restaurant.getBiggestTableSize());
+    }
+
+
+
+
+
+
+//    @Test
+//    public void optimizedTableMappingTest(){
+//        Party joe = new Party("Joe's Party",5);
+//        Party ronald = new Party("Ronald's Party",4);
+//
+//        Table table1 = new Table(1,5);
+//        table1.setCapacity(6);
+//        Table table2 = new Table(2,5);
+//        table2.setCapacity(4);
+//
+//
+//        Restaurant mcd = new Restaurant("Mcd");
+//        mcd.optimizedTableMapping(joe);
+//        mcd.optimizedTableMapping(ronald);
+//
+//
+//        Assert.assertEquals("Couldn't map",table1.getParty().getName(),joe.getName());
+//    }
 
 
 
