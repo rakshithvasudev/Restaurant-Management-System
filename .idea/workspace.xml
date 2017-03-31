@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,12 +18,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1113">
               <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1484">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,6 +121,7 @@
         <option value="$PROJECT_DIR$/tst/RestaurantTest.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
+        <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteClass.java" />
       </list>
     </option>
   </component>
@@ -802,7 +813,7 @@
       <workItem from="1490890995691" duration="1124000" />
       <workItem from="1490893812747" duration="3061000" />
       <workItem from="1490901800687" duration="10510000" />
-      <workItem from="1490919109604" duration="8085000" />
+      <workItem from="1490919109604" duration="8262000" />
     </task>
     <servers />
   </component>
@@ -839,7 +850,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190792000" />
+    <option name="totallyTimeSpent" value="190969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
@@ -926,14 +937,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Party.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
@@ -1378,6 +1381,16 @@
         <state relative-caret-position="1113">
           <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1484">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
