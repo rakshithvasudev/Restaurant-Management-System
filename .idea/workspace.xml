@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/ServersTest.java" afterPath="$PROJECT_DIR$/tst/ServersTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Restaurant/RestaurantTest.class" afterPath="$PROJECT_DIR$/out/test/Restaurant/RestaurantTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/RestaurantTest.java" afterPath="$PROJECT_DIR$/tst/RestaurantTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,31 +20,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Servers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
+      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1391">
-              <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-              <folding>
-                <element signature="e#2388#2389#0" expanded="true" />
-                <element signature="e#2441#2442#0" expanded="true" />
-                <element signature="e#2698#2699#0" expanded="true" />
-                <element signature="e#2730#2731#0" expanded="true" />
-                <element signature="e#2881#2882#0" expanded="true" />
-                <element signature="e#2927#2928#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="715">
+              <caret line="124" column="34" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServersTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tst/ServersTest.java">
+      <file leaf-file-name="RestaurantTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1073">
-              <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="914">
+              <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +76,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/restuarant/rakshith/RestaurantTextUI.java" />
-        <option value="$PROJECT_DIR$/tst/RestaurantTest.java" />
         <option value="$PROJECT_DIR$/tables.txt" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/RestaurantTextUI.java" />
@@ -94,6 +86,7 @@
         <option value="$PROJECT_DIR$/tst/PartyTest.java" />
         <option value="$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java" />
         <option value="$PROJECT_DIR$/tst/ServersTest.java" />
+        <option value="$PROJECT_DIR$/tst/RestaurantTest.java" />
       </list>
     </option>
   </component>
@@ -107,7 +100,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-14" />
     <option name="y" value="-14" />
-    <option name="width" value="3856" />
+    <option name="width" value="3868" />
     <option name="height" value="2098" />
   </component>
   <component name="ProjectView">
@@ -125,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,6 +164,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -191,15 +184,15 @@
       <recent name="C:\Users\Rakshith\Desktop\CBU hws\CSC526\HW5\Solution" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServersTest">
-    <configuration default="false" name="ServersTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RestaurantTest.removeFromWaitListTest">
+    <configuration default="false" name="RestaurantTest.setNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="cloneTest" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="setNameTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -213,14 +206,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.cloneTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RestaurantTest.getServerOnDutyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="cloneTest2" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="getServerOnDutyTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -234,14 +227,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.equalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RestaurantTest.addServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="equalsTest" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="addServerTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -255,14 +248,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest.compareToTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RestaurantTest.addToWaitListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" value="compareToTest" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="addToWaitListTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -276,15 +269,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ServersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RestaurantTest.removeFromWaitListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServersTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="removeFromWaitListTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -718,19 +711,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest2" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.equalsTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.compareToTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest.setNameTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getServerOnDutyTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addServerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToWaitListTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeFromWaitListTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ServersTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ServersTest.compareToTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ServersTest.equalsTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest2" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ServersTest.cloneTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeFromWaitListTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToWaitListTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addServerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getServerOnDutyTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.setNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -786,47 +779,48 @@
       <workItem from="1490837537539" duration="16560000" />
       <workItem from="1490890995691" duration="1124000" />
       <workItem from="1490893812747" duration="3061000" />
-      <workItem from="1490901800687" duration="9983000" />
+      <workItem from="1490901800687" duration="10510000" />
+      <workItem from="1490919109604" duration="1055000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ServersTest - 2017.03.30 at 15h 08m 27s.xml">
-      <configuration name="ServersTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest - 2017.03.30 at 17h 16m 47s.xml">
+      <configuration name="RestaurantTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest - 2017.03.30 at 15h 12m 56s.xml">
-      <configuration name="ServersTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_addServerTest - 2017.03.30 at 19h 01m 07s.xml">
+      <configuration name="RestaurantTest.addServerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_cloneTest - 2017.03.30 at 15h 10m 06s.xml">
-      <configuration name="ServersTest.cloneTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_addServerTest - 2017.03.30 at 19h 02m 27s.xml">
+      <configuration name="RestaurantTest.addServerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_cloneTest2 - 2017.03.30 at 15h 10m 28s.xml">
-      <configuration name="ServersTest.cloneTest2" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_addTableTest - 2017.03.30 at 17h 19m 25s.xml">
+      <configuration name="RestaurantTest.addTableTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_compareToTest - 2017.03.30 at 15h 12m 33s.xml">
-      <configuration name="ServersTest.compareToTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_addToWaitListTest - 2017.03.30 at 19h 05m 45s.xml">
+      <configuration name="RestaurantTest.addToWaitListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_constructorTest2 - 2017.03.30 at 15h 09m 00s.xml">
-      <configuration name="ServersTest.constructorTest2" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_constructorTest2 - 2017.03.30 at 17h 17m 51s.xml">
+      <configuration name="RestaurantTest.constructorTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_constructorTest2 - 2017.03.30 at 15h 09m 03s.xml">
-      <configuration name="ServersTest.constructorTest2" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_getServerOnDutyTest - 2017.03.30 at 18h 59m 55s.xml">
+      <configuration name="RestaurantTest.getServerOnDutyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestaurantTest_removeFromWaitListTest - 2017.03.30 at 19h 06m 48s.xml">
+      <configuration name="RestaurantTest.removeFromWaitListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestaurantTest_setNameTest - 2017.03.30 at 18h 58m 08s.xml">
+      <configuration name="RestaurantTest.setNameTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServersTest_equalsTest - 2017.03.30 at 15h 11m 19s.xml">
       <configuration name="ServersTest.equalsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 15h 01m 42s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ServersTest_setTipsTest - 2017.03.30 at 15h 01m 49s.xml">
-      <configuration name="ServersTest.setTipsTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182180000" />
+    <option name="totallyTimeSpent" value="183762000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="-14" width="3856" height="2098" extended-state="0" />
+    <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -844,7 +838,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19748461" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19925313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2556894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -901,7 +895,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -989,8 +983,13 @@
         <state relative-caret-position="265">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4468#4469#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1058,8 +1057,13 @@
         <state relative-caret-position="265">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4468#4469#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1117,8 +1121,13 @@
         <state relative-caret-position="265">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4468#4469#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,8 +1195,13 @@
         <state relative-caret-position="265">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4468#4469#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1230,7 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,14 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="238" column="11" lean-forward="false" selection-start-line="238" selection-start-column="11" selection-end-line="238" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1262,14 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1308,14 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2234">
-          <caret line="80" column="27" lean-forward="true" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tst/TableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
@@ -1330,32 +1319,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="238" column="11" lean-forward="false" selection-start-line="238" selection-start-column="11" selection-end-line="238" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Servers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1391">
-          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding>
-            <element signature="e#2388#2389#0" expanded="true" />
-            <element signature="e#2441#2442#0" expanded="true" />
-            <element signature="e#2698#2699#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2881#2882#0" expanded="true" />
-            <element signature="e#2927#2928#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-681">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/ServersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
+        <state relative-caret-position="450">
+          <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="124" column="34" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
