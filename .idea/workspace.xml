@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf272d40-a810-453a-8078-8d17a8a1621b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Restaurant/RestaurantTest.class" afterPath="$PROJECT_DIR$/out/test/Restaurant/RestaurantTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/RestaurantTest.java" afterPath="$PROJECT_DIR$/tst/RestaurantTest.java" />
     </list>
@@ -21,21 +19,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4915">
-              <caret line="119" column="9" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+            <state relative-caret-position="861">
+              <caret line="171" column="24" lean-forward="false" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestaurantTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9805">
-              <caret line="190" column="7" lean-forward="true" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
+            <state relative-caret-position="530">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,28 +203,7 @@
       <recent name="C:\Users\Rakshith\Desktop\CBU hws\CSC526\HW5\Solution" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RestaurantTest">
-    <configuration default="false" name="RestaurantTest.removeFromWaitListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Restaurant" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
-      <option name="METHOD_NAME" value="removeFromWaitListTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.PartyTest">
     <configuration default="false" name="RestaurantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
@@ -248,48 +225,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RestaurantTest.removeTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Restaurant" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
-      <option name="METHOD_NAME" value="removeTableTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RestaurantTest.getBiggestTableSizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Restaurant" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
-      <option name="METHOD_NAME" value="getBiggestTableSizeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="RestaurantTest.getBiggestTableUsableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Restaurant" />
@@ -299,6 +234,69 @@
       <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
       <option name="METHOD_NAME" value="getBiggestTableUsableTest" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RestaurantTest.getEmptyTablesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Restaurant" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="getEmptyTablesTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RestaurantTest.addToAllocationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Restaurant" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestaurantTest" />
+      <option name="METHOD_NAME" value="addToAllocationsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Restaurant" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PartyTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -732,19 +730,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeFromWaitListTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeTableTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableSizeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getEmptyTablesTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PartyTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableSizeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeTableTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.removeFromWaitListTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PartyTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RestaurantTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getBiggestTableUsableTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RestaurantTest.addToAllocationsTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RestaurantTest.getEmptyTablesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -801,44 +799,44 @@
       <workItem from="1490890995691" duration="1124000" />
       <workItem from="1490893812747" duration="3061000" />
       <workItem from="1490901800687" duration="10510000" />
-      <workItem from="1490919109604" duration="3505000" />
+      <workItem from="1490919109604" duration="4520000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestaurantTest - 2017.03.30 at 19h 09m 48s.xml">
-      <configuration name="RestaurantTest" configurationId="JUnit" />
+    <history-entry file="PartyTest - 2017.03.30 at 21h 47m 33s.xml">
+      <configuration name="PartyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestaurantTest - 2017.03.30 at 19h 23m 14s.xml">
-      <configuration name="RestaurantTest" configurationId="JUnit" />
+    <history-entry file="PartyTest - 2017.03.30 at 21h 48m 19s.xml">
+      <configuration name="PartyTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RestaurantTest - 2017.03.30 at 21h 26m 29s.xml">
       <configuration name="RestaurantTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestaurantTest_getBiggestTableSizeTest - 2017.03.30 at 21h 23m 51s.xml">
-      <configuration name="RestaurantTest.getBiggestTableSizeTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest - 2017.03.30 at 21h 44m 49s.xml">
+      <configuration name="RestaurantTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestaurantTest_getBiggestTableUsableTest - 2017.03.30 at 21h 26m 24s.xml">
+    <history-entry file="RestaurantTest - 2017.03.30 at 21h 47m 24s.xml">
+      <configuration name="RestaurantTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestaurantTest_addToAllocationsTest - 2017.03.30 at 21h 44m 31s.xml">
+      <configuration name="RestaurantTest.addToAllocationsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestaurantTest_addToAllocationsTest - 2017.03.30 at 21h 44m 42s.xml">
+      <configuration name="RestaurantTest.addToAllocationsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestaurantTest_getBiggestTableUsableTest - 2017.03.30 at 21h 47m 12s.xml">
       <configuration name="RestaurantTest.getBiggestTableUsableTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestaurantTest_removeFromWaitListTest - 2017.03.30 at 19h 06m 48s.xml">
-      <configuration name="RestaurantTest.removeFromWaitListTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_getBiggestTableUsableTest2 - 2017.03.30 at 21h 38m 08s.xml">
+      <configuration name="RestaurantTest.getBiggestTableUsableTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestaurantTest_removeFromWaitListTest - 2017.03.30 at 19h 08m 45s.xml">
-      <configuration name="RestaurantTest.removeFromWaitListTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestaurantTest_removeTableTest - 2017.03.30 at 19h 22m 25s.xml">
-      <configuration name="RestaurantTest.removeTableTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestaurantTest_removeTableTest - 2017.03.30 at 19h 22m 44s.xml">
-      <configuration name="RestaurantTest.removeTableTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestaurantTest_removeTableTest - 2017.03.30 at 19h 23m 04s.xml">
-      <configuration name="RestaurantTest.removeTableTest" configurationId="JUnit" />
+    <history-entry file="RestaurantTest_getEmptyTablesTest - 2017.03.30 at 21h 39m 02s.xml">
+      <configuration name="RestaurantTest.getEmptyTablesTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186212000" />
+    <option name="totallyTimeSpent" value="187227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
@@ -1356,14 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9805">
-          <caret line="190" column="7" lean-forward="true" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/DeleteMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4611">
@@ -1382,8 +1372,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/restaurant/rakshith/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4915">
-          <caret line="119" column="9" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+        <state relative-caret-position="861">
+          <caret line="171" column="24" lean-forward="false" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/RestaurantTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

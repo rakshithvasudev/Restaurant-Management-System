@@ -169,7 +169,7 @@ public final class Restaurant {
     }
 
     /**
-     * Gets the largest table in the Restaurant that's Unoccupied.
+     * Gets the largestSize of table in the Restaurant that's Unoccupied.
      *
      * @return the largestSize of the Unoccupied Tables.
      * @Pre: The tables field is not null.
