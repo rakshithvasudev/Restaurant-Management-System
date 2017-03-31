@@ -5,6 +5,14 @@ import java.util.*;
 
 /**
  * Created by Rakshith on 3/19/2017.
+ * This class is responsible for the entire restaurant to be handled. This class
+ * is not to be extended and all the fields are initialized in the constructor.
+ * allocations is just for the sake of testing. This doesn't implement cloneable.
+ * The default clone would not work properly. Collections used are mostly
+ * linkedHashMap because they support the retrieval of elements in the inserted order
+ * upon the usage of either keySet() values() and EntrySet() methods based on the
+ * requirements respectively.
+ *
  */
 public final class Restaurant {
     private Map<Integer, Table> tables;
@@ -30,8 +38,9 @@ public final class Restaurant {
     /**
      * Places the party in the right table.
      * As long as there is availability of tables that
-     * are unoccupied. This would mean that
-     *
+     * are unoccupied. This would mean that the Party, Servers
+     * and Table perform right handshakes with their setting and
+     * getting values.
      *
      * @param party the party supposed to be seated.
      * @pre : The party is not null and has a practically finite number of
@@ -69,7 +78,13 @@ public final class Restaurant {
         return false;
     }
 
-
+    /**
+     * Manages the table by setting the party, occupiedStatus and
+     * calls setServerForParty(Table,Party)method.
+     *
+     * @param party        party that has to be seated.
+     * @param currentTable the table where server must be assigned.
+     */
     private void manageTable(Party party, Table currentTable) {
         currentTable.setParty(party);
         currentTable.setOccupiedStatus(true);
@@ -78,12 +93,14 @@ public final class Restaurant {
 
     /**
      * Sets a server for the required Party at the Required Table.
-     * @pre none of the arguments must be null.
+     *
      * @param currentTable the table that has the party.
-     * @param party the actual party.
+     * @param party        the actual party.
+     * @pre none of the arguments must be null.
      */
     private void setServerForParty(Table currentTable, Party party) {
         int counterIndex = 0;
+        List<Servers> serversList = new ArrayList<>(servers.values());
         if (servers.size() > 0)
             //values() are retrieved in the order inserted.
             for (Servers currentServer : servers.values())
@@ -94,7 +111,7 @@ public final class Restaurant {
                     currentServer.serveAnotherTable(currentTable);
                     currentTable.setServer(currentServer);
                     party.setBeingServed(true);
-                    addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
+                    //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
                     System.out.println("Party seated at " + currentTable);
                     break;
 
@@ -128,8 +145,9 @@ public final class Restaurant {
 
     /**
      * Adds a server to the restaurant.
-     * @pre Server can't be null.
+     *
      * @param server the server to be added.
+     * @pre Server can't be null.
      */
     public void addServer(Servers server) {
         servers.put(server.getId(), server);
@@ -137,6 +155,7 @@ public final class Restaurant {
 
     /**
      * Adds a party to a waitList.
+     *
      * @param party the party to be added to the list.
      */
     public void addToWaitList(Party party) {
@@ -145,6 +164,7 @@ public final class Restaurant {
 
     /**
      * Removes a party from the waitList
+     *
      * @param party the party to be removed.
      */
     public void removeFromWaitList(Party party) {
@@ -153,6 +173,7 @@ public final class Restaurant {
 
     /**
      * Removes a table from the restaurant.
+     *
      * @param table table that has to be removed.
      */
     public void removeTable(Table table) {

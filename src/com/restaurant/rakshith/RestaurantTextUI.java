@@ -160,15 +160,17 @@ public class RestaurantTextUI {
 		// when only one server remains with tables remaining,
         if(restaurant.getServers().size()==1)
             //Check if any table is occupied.
-               for (Table currentTable:restaurant.getTables().values())
-                if(currentTable.getOccupiedStatus()) {
+            //if the restaurant's emptyTable count is not equal to all the number of tables in restaurant
+            //then any or many tables are occupied.
+            if(restaurant.getEmptyTables()!=restaurant.getTables().size()) {
                     System.out.println("Sorry, the server cannot cash out now;");
                     System.out.println("there are still tables remaining and this is the only server left.");
                 }
 		// when the server is able to be dismissed,
+        if(restaurant.getServers().size()!=0){
         Map.Entry<Integer,Servers> ServerTobeDismissed = restaurant.getServers().entrySet().iterator().next();
 		System.out.println("Dismissing a server:");
-		
+
 		// TODO: cash out server and display current count of servers
 		// Servers #2 cashes out with $47.95 in total tips.
         // Servers now available: 3
@@ -184,8 +186,8 @@ public class RestaurantTextUI {
 
         System.out.println("Servers now available: "+ restaurant.getServerCountOnDuty());
 
+        }
     }
-	
 	// Called when R key is pressed from main menu.
 	// Displays how much money is in the restaurant's cash register.
 	private void cashRegister() {
@@ -317,15 +319,15 @@ public class RestaurantTextUI {
             // when all tables large enough to accommodate this party are taken,
             System.out.println("Sorry, there is no open table that can seat this party now.");
 
-        if(restaurant.getBiggestTableSize()<partySize)
+        if(restaurant.getBiggestTableSize()<partySize){
         // when the restaurant doesn't have any tables big enough to ever seat this party
           System.out.println("Sorry, the restaurant is unable to seat a party of this size.");
-
-        boolean wait = ValidInputReader.getYesNo("Place this party onto the waiting list? (y/n)");
+          boolean wait = ValidInputReader.getYesNo("Place this party onto the waiting list? (y/n)");
         // TODO: put this party on the waiting list
 		if(wait)
 		    restaurant.addToWaitList(currentParty);
 
+	    }
 	}
 	
 	
