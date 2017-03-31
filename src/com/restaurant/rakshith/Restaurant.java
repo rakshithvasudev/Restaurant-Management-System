@@ -99,20 +99,21 @@ public final class Restaurant {
      * @pre none of the arguments must be null.
      */
     private void setServerForParty(Table currentTable, Party party) {
-        int counterIndex = 0;
-        List<Servers> serversList = new ArrayList<>(servers.values());
+        int counterIndex = 1;
+//        List<Servers> serversList = new ArrayList<>(servers.values());
         if (servers.size() > 0)
             //values() are retrieved in the order inserted.
             for (Servers currentServer : servers.values())
                 if (currentServer.getOnDuty()) {
                     if (currentServer.getTablesServed().size() > 0 &&
-                            servers.size() % currentServer.getTablesServed().size() == 0)
+                            servers.size() % counterIndex == 0)
                         continue;
                     currentServer.serveAnotherTable(currentTable);
                     currentTable.setServer(currentServer);
                     party.setBeingServed(true);
+                    counterIndex++;
                     //addToAllocations(currentServer,new ArrayList<>(tableMap.values()));
-                    System.out.println("Party seated at " + currentTable);
+//                    System.out.println("Party seated at " + currentTable);
                     break;
 
                 }
